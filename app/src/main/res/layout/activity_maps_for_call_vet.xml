@@ -1,0 +1,43 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivityForFindingVet" >
+
+</fragment>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_vets_on_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_alignParentBottom="true"
+        android:text="Make Call"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:background="@drawable/button_press_stat"/>-->
+
+    <ImageView
+        android:id="@+id/progress_logo"
+        android:layout_centerInParent="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logi_icon"
+        android:visibility="gone"/>
+
+</RelativeLayout>

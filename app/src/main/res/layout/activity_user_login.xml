@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="betaar.pk.UserLoginActivity"
+    android:background="@drawable/plan_background">
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/full_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/bt_bacground_bottom">
+
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:hint="Username/Email/Mobile No."
+                android:paddingLeft="10dp"
+                android:paddingRight="4dp"
+                android:textSize="16sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorhint"
+                android:singleLine="true"
+                android:background="@drawable/et_background"/>
+
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:paddingLeft="10dp"
+                android:paddingRight="4dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="Password"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorhint"
+                android:background="@drawable/et_background"/>
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlue"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/button_press_stat"/>
+
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/bt_register_as"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Register"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bt_bacground_bottom"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="betaar.pk.OrganizationOfferJobsActivity"
+    android:background="@drawable/background_wth_gradian">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Title"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_spiner_job_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/spiner_background">
+
+            <Spinner
+                android:id="@+id/sp_select_qualification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/colorWhite"
+                android:entries="@array/product_categories"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:scrollbarThumbVertical="@drawable/scrollview_thumb"
+                android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_spiner_salary_range"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/spiner_background">
+
+            <Spinner
+                android:id="@+id/sp_select_salary_range"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/salary_range"
+                android:backgroundTint="@color/colorWhite"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:scrollbarThumbVertical="@drawable/scrollview_thumb"
+                android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"/>
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/et_job_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:hint="Job title"
+            android:paddingLeft="10dp"
+            android:paddingRight="4dp"
+            android:inputType="text"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/et_background1"/>
+
+        <EditText
+            android:id="@+id/et_required_experience"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:paddingLeft="10dp"
+            android:paddingRight="4dp"
+            android:inputType="number"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="Required Experience"
+            android:background="@drawable/et_background1"/>
+
+        <EditText
+            android:id="@+id/et_qualifications"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:paddingLeft="10dp"
+            android:paddingRight="4dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="Qualifications"
+            android:background="@drawable/et_background1"/>
+
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="4dp"
+            android:gravity="top"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="Description"
+            android:background="@drawable/et_background"
+            android:layout_marginBottom="4dp"/>
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Post"
+            android:textAllCaps="false"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_press_syle"/>
+
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/progress_logo"
+        android:layout_centerInParent="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logi_icon"
+        android:visibility="gone"/>
+
+</RelativeLayout>

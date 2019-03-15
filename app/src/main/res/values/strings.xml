@@ -1,0 +1,505 @@
+<resources>
+    <string name="app_name">Betaar</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity">FAB_Menu</string>
+    <string name="title_veterinary">Veterinarian</string>
+    <string name="title_sale_products">Sale Products</string>
+    <string name="title_offer_jobs">Offer Jobs</string>
+
+
+    <string-array name="qualification_type">
+        <item>Select</item>
+        <item>LAD</item>
+        <item>DVM</item>
+    </string-array>
+
+    <string-array name="product_types">
+        <item>Select Product Type</item>
+        <item>Dairy Solution</item>
+        <item>Pet Solution</item>
+        <item>Equine Solution</item>
+        <item>Birds Solution</item>
+        <item>Wild Life Solution</item>
+
+    </string-array>
+
+    <string-array name="only_dairy">
+        <item>Dairy Solution</item>
+    </string-array>
+
+    <string-array name="only_pet">
+        <item>Pet Solution</item>
+    </string-array>
+
+    <string-array name="only_equine">
+        <item>Equine Solution</item>
+    </string-array>
+
+    <string-array name="only_bird">
+        <item>Bird Solution</item>
+    </string-array>
+
+    <string-array name="only_wild_life">
+        <item>Wild Life Solution</item>
+    </string-array>
+
+    <string-array name="product_categories_for_dairy">
+        <item>Select Category</item>
+        <item>Animals (sale &amp; pur)</item>
+        <item>Milk (sale &amp; purc)</item>
+        <item>Labour</item>
+        <item>Land on Rent</item>
+
+
+    </string-array>
+
+    <string-array name="product_categories_for_dairy_organization">
+        <item>Select Category</item>
+        <item>Accessories</item>
+        <item>Feed</item>
+        <item>Animals (sale &amp; pur)</item>
+        <item>Milking Machine</item>
+        <item>Medicine Products</item>
+        <item>Shed Constructions</item>
+        <item>Labs</item>
+        <item>Labour</item>
+        <item>Land On Rent</item>
+        <item>Sprays</item>
+        <item>Milk (sale &amp; purc)</item>
+        <item>Labour</item>
+        <item>Dairy Crops Seed</item>
+
+
+    </string-array>
+
+
+    <string-array name="product_categories_for_pets">
+        <item>Select Category</item>
+        <item>Pets (sale &amp; pur)</item>
+        <item>Labour</item>
+        <item>Pet Trainer</item>
+        <item>Breeder Services</item>
+
+    </string-array>
+
+
+    <string-array name="product_categories_for_pets_organization">
+        <item>Select Category</item>
+        <item>Accessories</item>
+        <item>Feed</item>
+        <item>Pets (sale &amp; pur)</item>
+        <item>Veccinations</item>
+        <item>Medicine Products</item>
+        <item>Labour</item>
+        <item>Cages/Housing Const</item>
+        <item>Labs</item>
+        <item>Labour</item>
+        <item>Pet Trainer</item>
+        <item>Breeder Services</item>
+
+    </string-array>
+
+
+    <string-array name="product_categories_for_equine">
+        <item>Select Category</item>
+        <item>Equine (sale &amp; pur)</item>
+        <item>Labour</item>
+        <item>Horse Trainer</item>
+        <item>Breede Services</item>
+    </string-array>
+
+
+    <string-array name="product_categories_for_equine_organization">
+        <item>Select Category</item>
+        <item>Accessories</item>
+        <item>Feed</item>
+        <item>Equine (sale &amp; pur)</item>
+        <item>Vaccinations</item>
+        <item>Medicine Products</item>
+        <item>Shed Construction</item>
+        <item>Labs</item>
+        <item>Labour</item>
+        <item>Horse Trainer</item>
+        <item>Breede Services</item>
+    </string-array>
+
+
+    <string-array name="product_categories_for_bird">
+        <item>Select Category</item>
+        <item>Birds (sale &amp; pur)</item>
+        <item>Labour</item>
+        <item>Egg (sale &amp; pur)</item>
+        <item>Shed for Rent</item>
+
+    </string-array>
+
+
+    <string-array name="product_categories_for_bird_organization">
+        <item>Select Category</item>
+        <item>Accessories</item>
+        <item>Feed</item>
+        <item>Birds (sale &amp; pur)</item>
+        <item>Veccinatios</item>
+        <item>Medicine Products</item>
+        <item>Cates/Shed Const</item>
+        <item>Labs</item>
+        <item>Labour</item>
+        <item>Egg (sale &amp; pur)</item>
+        <item>Shed for Rent</item>
+
+    </string-array>
+
+
+    <string-array name="product_categories_for_other">
+        <item>Select Category</item>
+        <item>Animals (sale &amp; pur)</item>
+        <item>Labour</item>
+
+    </string-array>
+
+
+    <string-array name="product_categories_for_other_organization">
+        <item>Select Category</item>
+        <item>Acceesories</item>
+        <item>Feed</item>
+        <item>Animals (sale &amp; pur)</item>
+        <item>Vaccinations</item>
+        <item>Medicine Products</item>
+        <item>Aquariums Cages</item>
+        <item>Labs</item>
+        <item>Labour</item>
+
+    </string-array>
+
+
+    <string-array name="product_sub_categories_for_dairy_accesories">
+        <item>Select Sub Category</item>
+        <item>Surgical Instruments</item>
+        <item>Fooder Cutting Machine</item>
+        <item>Fans/Shower</item>
+        <item>Tags/Tag Markers</item>
+        <item>Calf Cages/Mats</item>
+        <item>TMR/Tractor/Trolley</item>
+        <item>Bio-Gas Plant</item>
+        <item>Cattle Crush</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_feed">
+        <item>Select Sub Category</item>
+        <item>Silage</item>
+        <item>Fresh Fooder</item>
+        <item>Wanda</item>
+        <item>Wanda Ingredient</item>
+        <item>Hay/Beet Plup</item>
+        <item>Wheat Straw</item>
+        <item>Feed Additives</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="product_sub_categories_for_dairy_animals">
+        <item>Select Sub Category</item>
+        <item>Local Dairy Cows</item>
+        <item>Imported Dairy Cows</item>
+        <item>Buffalo</item>
+        <item>Sheep</item>
+        <item>Goat</item>
+        <item>Bulls</item>
+        <item>Qurban Animals For Eid</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_milking_parlour">
+        <item>Select Sub Category</item>
+        <item>Mobile Machines</item>
+        <item>Milking rows</item>
+        <item>Milking Parlour</item>
+        <item>Spare Parts</item>
+        <item>Acid/Alkali For CIP</item>
+        <item>Teat Dip Solutions</item>
+        <item>Chillers</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_medicine_products">
+        <item>Select Sub Category</item>
+        <item>Vaccinations</item>
+        <item>Dewormer</item>
+        <item>Antibiotics</item>
+        <item>Hormones</item>
+        <item>NSAIDS/Steroids</item>
+        <item>Supportive</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="product_sub_categories_for_dairy_sheed_construction">
+        <item>Select Sub Category</item>
+        <item>Open Shed</item>
+        <item>Semi Control Shed</item>
+        <item>Control Shed</item>
+        <item>Desi Structure</item>
+        <item>Shed Material</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_labs">
+        <item>Select Sub Category</item>
+        <item>Feed Analysis</item>
+        <item>Blood Analysis</item>
+        <item>Fecal Analysis</item>
+        <item>X-Rays</item>
+        <item>Ultrasounds</item>
+        <item>Water Analysis</item>
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_labour">
+        <item>Select Sub Category</item>
+        <item>Milker</item>
+        <item>Feeding Boy</item>
+        <item>Supervisor</item>
+        <item>Thekedar</item>
+        <item>Cook</item>
+        <item>Security Guard</item>
+        <item>Electrician/Welder</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_land_on_rent">
+        <item>Select Sub Category</item>
+        <item>Shed For Rent</item>
+        <item>Agriculture Land For Rent</item>
+
+
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_sprays">
+        <item>Select Sub Category</item>
+        <item>Pesticides</item>
+        <item>Insecticides</item>
+        <item>Disinfectants</item>
+        <item>Bactericidal</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_milk_sale_pur">
+        <item>Select Sub Category</item>
+        <item>Cow Milk</item>
+        <item>Buffalo Milk</item>
+        <item>Goat Milk</item>
+        <item>Camel Milk</item>
+        <item>Cow &amp; Buffalo Milk</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="product_sub_categories_for_dairy_crops_seed">
+        <item>Select Sub Category</item>
+        <item>Corn</item>
+        <item>Alfalfa</item>
+        <item>Sorghum</item>
+        <item>Oats</item>
+        <item>Rhodes Grass</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="product_categories">
+        <item>Select Category</item>
+        <item>Dairy Farm job</item>
+        <item>Dairy Marketing job</item>
+        <item>Poultry Farm job</item>
+        <item>Poultry Marketing job</item>
+        <item>Zoo job</item>
+        <item>Equine farm job</item>
+        <item>Pet hospital job</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="Surgeon">
+        <item>Select</item>
+        <item>Surgery1</item>
+        <item>Surgery2</item>
+        <item>Surgery3</item>
+        <item>Surgery4</item>
+        <item>Surgery5</item>
+    </string-array>
+
+
+    <string-array name="dairy_categories">
+        <item>Select Category</item>
+        <item>Cow</item>
+        <item>Buffalo</item>
+        <item>Sheep</item>
+        <item>Goat</item>
+        <item>Camel</item>
+    </string-array>
+
+    <string-array name="pets_categories">
+        <item>Select Category</item>
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Rabbit</item>
+    </string-array>
+
+    <string-array name="quine_categories">
+        <item>Select Category</item>
+        <item>Horse</item>
+        <item>Donkey</item>
+        <item>Mule</item>
+    </string-array>
+
+
+    <string-array name="birds_categories">
+        <item>Select Category</item>
+        <item>Ostrich</item>
+        <item>Poultry Birds</item>
+        <item>Fancy Birds</item>
+        <item>Game Birds</item>
+    </string-array>
+
+    <string-array name="other_solution">
+        <item>Select Category</item>
+        <item>Fish</item>
+        <item>Lion</item>
+        <item>Deer</item>
+        <item>Monkey</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="job_categories">
+        <item>Select Job Category</item>
+        <item>Dairy Farm job</item>
+        <item>Dairy Marketing job</item>
+        <item>Poultry Farm job</item>
+        <item>Poultry Marketing job</item>
+        <item>Zoo job</item>
+        <item>Equine farm job</item>
+        <item>Pet hospital job</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="salary_range">
+        <item>Select Salary Range</item>
+        <item>5000-15000</item>
+        <item>1500-25000</item>
+        <item>2500-40000</item>
+        <item>40000-64000</item>
+        <item>65000-80000</item>
+        <item>80000-100000</item>
+        <item>100000+</item>
+
+    </string-array>
+
+    <string-array name="request_type">
+        <item>Select Request Type</item>
+        <item>Immediate</item>
+        <item>Schedule</item>
+
+    </string-array>
+
+    <string name="title_activity_verification_for_client">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing emailcompletions."</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--<string name="place_key">AIzaSyCW64V0Ugrz0KC2wBpwnZeAgL79Q4nHyKg</string>-->
+    <string name="place_key">AIzaSyDAJ7SvT6p-dOXxVQ7ALmMXHiOeqqV7Mhc</string>
+
+    <string name="startpecefullift">Start a Peacefull Life With</string>
+    <string name="descriptiontext">The Betaar Company is the largest, most impressive, creative and forward-thinking Veterinary service provider company in Pakistan. At the core of your business philosophy is a commitment to extraordinary service, honesty, and clear communication.
+In brief. You will feel the difference as soon as you walk into our offices, speak with us on the telephone, or meet us in person. Our experienced broker agents, qualified agents, and a lot of the time support staff are friendly, knowledgeable, and very hard-working. All of us incorporate the best in good old-fashioned customer support with the most recent and best in technology and web-affiliated marketing.</string>
+
+    <string name="ourmission">OUR MISSION</string>
+    <string name="ouragents">OUR AGENTS</string>
+    <string name="ourmissiondescrption">Our mission is to provide the highest level of service to our clients to help them on demand.</string>
+    <string name="ouragentdescription">Our Agents are all long time Whistler locals and are experts in both the area and the treatment market.</string>
+    <string name="ourvision">OUR VISION</string>
+    <string name="ourvisiondescription">Betaar is a regional, providing full-service quality. Betaar will find you the best veterinary nearby you.</string>
+    <string name="value">VALUES</string>
+    <string name="valuedescription">We always do what is right, and ethical. We share appropriate information in an honest. We are positive and enthusiastic.</string>
+
+
+    <string name="description_text_for_contact_us">We Collect the minimum amount of information about you that is commensurate with providing you satification services. This policy indicate the type of processes tha may result in data being collected about you. Your use of this app give us the right to collect the information</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_check_up">CheckUp</string>
+
+    <string name="terms_and_conditions">TERMS AND CONDITIONS:
+
+        BETAAR Terms of Service Last update:
+Welcome to BETAAR.com.pk. BETAAR.com.pk is a veterinary marketplace platform for services performed by its users.
+The following terms and conditions (these "Terms of Service"), govern your access to and use of the BETAAR website, including any content, functionality and services offered on or through www.BETAAR.com.pk
+Please read the Terms of Service carefully before you start to use the Site. By using the Site, opening an account or by clicking to accept or agree to the Terms of Service when this option is made available to you, you accept and agree to be bound and abide by these Terms of Service and our Privacy Policy. If you do not want to agree to these Terms of Service or the Privacy Policy, you must not access or use the Site. For more detailed policies surrounding the activity and usage on the Site, please access the designated articles herein.
+By using this Site, you represent and warrant that you are of legal age to form a binding contract and meet all of the foregoing eligibility requirements. If you do not meet all of these requirements, you must not access or use the Site.
+Key Terms
+Vets are micro-job veterinarian’s on BETAAR.
+Rx are services of medicine prescription, treatments or recipe provided by vets.
+Fee are the earnings for vets, received from client after Rx.
+Call Vets is for clients to avail the checkup services of vets at door step for their animals.
+Offer jobs are veterinary jobs offered by organizations.
+Seeking Jobs is opportunity for registered vets to find veterinary related jobs.
+clients are the users who get the services of Vets on BETAAR.
+Products are the stuff offered for sale on BETAAR.
+Buyer are the users who buy the products on BETAAR.
+Vendor are users who offer their products for sale on BETAAR. A vendor can be organization, a client (for limited products).
+Product Page is for vendors to add Products.
+Orders are the formal agreement between a buyer and vendor after a purchase was made from the vendor’s Product Page.
+Order Page is where buyer and vendor communicate with each other in connection with an ordered Product.
+Disputes are disagreements experienced during an order between a buyer and vendor on BETAAR.
+Revenue is the money vendor earn from completed orders.
+Sales Balance is cleared Revenue from completed orders for vendor to withdraw or use to purchase Products.
+Shopping Balance is shopping credit collected from cancelled orders or BETAAR promotions to be used for purchasing Products.
+Overview
+	Only registered users may buy and sell on BETAAR. Registration is free.
+	After completion of Rx Clients will receive a confirmation message with details of Rx provided to animals by vets. Clients pay only that amount, declared by BETAAR on vets fee page.
+	Compulsory for Vets to create a security account and maintain the account with minimum limit of PKR1500.Vets collect only the BETAAR mentioned amount from client that will be shown on fee page after completion of Rx. 15% of the received amount deducted by BETAAR from the security account of vets.
+	Buyer pay BETAAR in advance to create an order for products.
+	For payments please read the purchasing section here.
+	vendor must fulfill their orders, and may not cancel orders on a regular basis or without cause. Cancelling orders will affect vendor’ reputation and status.
+	Buyer Users may not offer or accept payments using any method other than placing an order to buy products through BETAAR.com
+	We care about your privacy. You can read our Privacy Policy here. The Privacy Policy is a part of these Terms of Service and incorporated herein by reference.
+
+    </string>
+
+    <string name="signup_help"><![CDATA[<p> If you sign up as a <font color="red">Veterinarian</font> you can avail the following benefits:<br/>
+•    You can sale products<br/>
+•    You can provide service as a veterinarian<br/>
+<br/>
+If you sign up as a <font color="red">Client</font> you can avail the following benefits:<br/>
+•    Sale products<br/>
+•    Buy products<br/>
+•    Get Services of a veterinarian<br/>
+<br/>
+If you sign up as an <font color="red">Organization</font> you can avail the following benefits:<br/>
+•    Sale Products<br/>
+•    Offer Jobs<br/> <p>]]>
+
+    </string>
+
+    <string name="welcome_msg">Welcome!</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="contacts_permission_rationale">Access to account information is required to sign in.</string>
+    <string name="invite_menu_label">Invite</string>
+    <string name="invitation_message">Please join me for a friendly chat</string>
+    <string name="invitation_cta">Call to action</string>
+    <string name="invitation_title">Friendly Chat Invite</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="fresh_config">Fresh Config</string>
+    <string name="cause_crash">Cause Crash</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+</resources>

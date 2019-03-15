@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FarmSolutionSubCategoryForDairy">
+
+<!--
+    <RelativeLayout
+        android:id="@+id/rl_surgical_instruments_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_surgical_instruments_dairy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_surgical_instruments_dairy"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Surgical Instruments"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+-->
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_surgical_fodder_cutting_machine_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_fodder_cutting_machine"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_fodder_cutting_machine"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Surgical Fodder Cutting Machine"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fans_shower_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_fans_shower"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_fans_shower"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Fans/Shower"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tags_tag_markers_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_tags_tag_markers"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_tags_tag_markers"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Tags/Tag Markers"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_calf_cages_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_calf_cages"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_calf_cages"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Calf Cages"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_TMR_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_TMR"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_TMR"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="TMR/Tractor/Trolley"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bio_gas_plant_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_bio_gas_plant"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_bio_gas_plant"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Bio Gas Plant"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_cattle_crush_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_cattle_crush"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_cattle_crush"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Cattle Crush"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_other_dairy_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_width"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_press_syle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView_other"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_accessories"/>
+
+        <TextView
+            android:id="@+id/bt_other"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:text="Other"
+            android:textSize="12sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>-->
+
+</LinearLayout>

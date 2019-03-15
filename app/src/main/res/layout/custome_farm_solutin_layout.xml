@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorBlue">
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+       android:text="Title "
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/tv_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal"
+            android:layout_weight="1.4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_line_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample Text 1"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_line_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample Text 2"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tv_line_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample Text 3"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/bt_item_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:text="Detail"
+            android:layout_gravity="center_vertical|right"
+            android:layout_weight="1.4"
+            android:textAllCaps="false"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/button_press_stat"/>
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "469543627276",
+    "firebase_url": "https://betaar-5ac6d.firebaseio.com",
+    "project_id": "betaar-5ac6d",
+    "storage_bucket": "betaar-5ac6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469543627276:android:b0257722c6fa6371",
+        "android_client_info": {
+          "package_name": "betaar.pk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469543627276-s8u46qi72jq373tlol6m7m8srr4rqt3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "betaar.pk",
+            "certificate_hash": "5f57386e761baeafb52c64868974b79af2d45a21"
+          }
+        },
+        {
+          "client_id": "469543627276-006i479mkj6rsjbcmiq2bmtlfkflstmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Wbncmn-rWyyHBUPEp26l7BDk734P6KY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469543627276-006i479mkj6rsjbcmiq2bmtlfkflstmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

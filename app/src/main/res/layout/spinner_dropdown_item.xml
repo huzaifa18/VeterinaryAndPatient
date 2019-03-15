@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<TextView
+    android:id="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:ellipsize="marquee"
+    android:gravity="center|left"
+    android:paddingLeft="5dp"
+    android:textSize="13dp"
+    android:text="abc"
+    android:background="@color/colorBlue"
+    android:textColor="@color/colorWhite"/>
+
+</RelativeLayout>

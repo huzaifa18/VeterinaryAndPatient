@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="betaar.pk.FarmSolutionForDairy"
+    android:background="@drawable/background_wth_gradian">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="61dp"
+        android:id="@+id/relativeLayout2">
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bt_bacground_bottom"
+        android:paddingBottom="20dp">
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_buttons"
+            android:layout_below="@+id/rl_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/bt_accessories"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Accessories"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/bt_feed"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Feed"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/bt_animal_sale_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Animals (Sale &amp; Purchase)"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:id="@+id/bt_veccinatin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Veccination"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/bt_medicine_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Medicine Products"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:id="@+id/bt_shed_constructions"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Shed Constructions"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/bt_labs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Labs"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:id="@+id/bt_labor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Shed Consturctions"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_labs_labor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_width"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/bt_Labs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Labs"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:id="@+id/bt_labors"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:layout_gravity="center_horizontal"
+                android:inputType="text"
+                android:background="@drawable/button_press_stat"
+                android:textAllCaps="false"
+                android:text="Labor"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_btns_milk_daisy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/bt_milk_sale_purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_gravity="center_horizontal"
+                    android:inputType="text"
+                    android:background="@drawable/button_press_stat"
+                    android:textAllCaps="false"
+                    android:text="Milk (Sale &amp; Purchase)"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp" />
+
+                <Button
+                    android:id="@+id/bt_dairy_crops_seed"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_gravity="center_horizontal"
+                    android:inputType="text"
+                    android:background="@drawable/button_press_stat"
+                    android:textAllCaps="false"
+                    android:text="Dairy Crpps Seed"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/relativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:text="Farm Solution"
+        android:textColor="@color/colorBlue"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+</RelativeLayout>

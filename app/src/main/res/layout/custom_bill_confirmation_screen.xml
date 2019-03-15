@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/listing_card">
+            <!--android:paddingTop="20dp"-->
+
+            <TextView
+                android:id="@+id/tv_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="Title "
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_below="@+id/tv_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_line_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sample Text 1"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/tv_line_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sample Text 2"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="@color/colorWhite" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_line_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sample Text 3"
+                            android:layout_marginBottom="2dp"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/tv_line_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sample Text 4"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/colorWhite"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <!--<TextView
+                        android:id="@+id/tv_line_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sample Text 4"
+                        android:textColor="@color/colorWhite" />-->
+
+                </LinearLayout>
+
+
+                <!--<RelativeLayout
+                    android:id="@+id/bt_item_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_weight="1.3"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/listing_button_view_more">
+                    <TextView
+                        android:id="@+id/tv_viwe_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Detail"
+                        android:textSize="12sp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite" />
+                </RelativeLayout>-->
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>
