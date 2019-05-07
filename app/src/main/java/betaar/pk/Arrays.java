@@ -382,6 +382,12 @@ public class Arrays {
         add(new DataIds("DVM","2"));
     }};
 
+    public static ArrayList<DataIds> languages = new ArrayList<DataIds>(){{
+        add(new DataIds("Select Language","0"));
+        add(new DataIds("English","1"));
+        add(new DataIds("Urdu","2"));
+    }};
+
     public static ArrayList<DataIds> Surgeon = new ArrayList<DataIds>(){{
         add(new DataIds("Select","0"));
         add(new DataIds("Surgery1","1"));
@@ -397,8 +403,9 @@ public class Arrays {
 
         for (int i = 0 ; i < array.size() ; i++) {
 
-            if (array.get(i).getName().toLowerCase().equals(find.toLowerCase())){
+            if (array.get(i).getName().toLowerCase().equals(find.toLowerCase()) || array.get(i).getName().equals(find)){
 
+                Log.e("TEST","FIND: " + find.toLowerCase());
                 category_id = array.get(i).getId();
 
                 break;

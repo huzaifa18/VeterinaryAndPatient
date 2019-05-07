@@ -58,6 +58,7 @@ public class CheckupRequestsListing extends DrawerActivityForVeterinarian {
 
 
     private void ini(){
+
         rv_checkup_requests = (RecyclerView) findViewById(R.id.rv_checkup_requests);
         linearLayoutManager = new LinearLayoutManager(getApplicationContext() , LinearLayoutManager.VERTICAL, false);
         rv_checkup_requests.setLayoutManager(linearLayoutManager);
@@ -79,7 +80,6 @@ public class CheckupRequestsListing extends DrawerActivityForVeterinarian {
 
     }
 
-
     private void checkUpRequests(){
 
         // Tag used to cancel the request
@@ -89,7 +89,6 @@ public class CheckupRequestsListing extends DrawerActivityForVeterinarian {
         progress_logo.setVisibility(View.VISIBLE);
         rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
         progress_logo.setAnimation(rotate);
-
 
         StringRequest strReq = new StringRequest(Request.Method.POST, API.Get_requests, new Response.Listener<String>() {
 

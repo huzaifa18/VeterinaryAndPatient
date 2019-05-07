@@ -111,6 +111,7 @@ public class VisitDetail extends AppCompatActivity {
         setData();
         acceptButtonClickListener();
 
+
     }
 
     private void acceptButtonClickListener() {
@@ -120,7 +121,7 @@ public class VisitDetail extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                if (tv_btn_accept.getText().toString().equals("Go to DashBoard")){
+                if (tv_btn_accept.getText().toString().equals("Go To Dashboard")){
 
                     if (Prefs.getUserRoleFromPref(VisitDetail.this).equals("Client")) {
 
@@ -130,7 +131,7 @@ public class VisitDetail extends AppCompatActivity {
 
                     } else {
 
-                        Intent i = new Intent(VisitDetail.this, DashboardClient.class);
+                        Intent i = new Intent(VisitDetail.this, DashboardVeterinarian.class);
                         startActivity(i);
                         finish();
 
@@ -147,24 +148,7 @@ public class VisitDetail extends AppCompatActivity {
 
     private void setData() {
 
-        /*if (request_type.equals("cancelled")){
-
-            accept_btn.setVisibility(View.GONE);
-            tv_note.setVisibility(View.VISIBLE);
-            tv_note.setText("Request Cancelled!");
-
-        } else if (request_type.equals("accepted") || request_type.equals("current")){
-
-            tv_note.setVisibility(View.VISIBLE);
-            tv_note.setText("Request Accepted!");
-            tv_btn_accept.setText("View Location");
-
-        } else if (request_type.equals("completed")){
-            tv_note.setVisibility(View.GONE);
-            tv_note.setText("Request Completed!");
-            accept_btn.setVisibility(View.GONE);
-
-        }*/
+        Log.e("TEST","Request Type: " + request_type);
 
         if (request_type.equals("finished")){
             accept_btn.setVisibility(View.VISIBLE);
@@ -172,6 +156,7 @@ public class VisitDetail extends AppCompatActivity {
             tv_note.setText("Visit Finished!");
             tv_btn_accept.setText("Go To Dashboard");
         }
+
         Log.e("TAG","Request Type: " + request_type);
 
         tv_name.setText(name);

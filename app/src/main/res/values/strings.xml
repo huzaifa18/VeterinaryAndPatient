@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">Betaar</string>
+    <string name="app_name" translatable="false">Betaar</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity">FAB_Menu</string>
+    <string name="title_activity" translatable="false">FAB_Menu</string>
     <string name="title_veterinary">Veterinarian</string>
+    <string name="title_client">Client</string>
+    <string name="title_organization">Organization</string>
     <string name="title_sale_products">Sale Products</string>
     <string name="title_offer_jobs">Offer Jobs</string>
 
@@ -400,24 +402,53 @@
 
     </string-array>
 
+    <string-array name="quantity">
+        <item>Select Quantity</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+
+    </string-array>
+
+    <string-array name="price_units">
+        <item>Units</item>
+        <item>PKR</item>
+        <item>$</item>
+        <item>€</item>
+        <item>£</item>
+
+    </string-array>
+
     <string name="title_activity_verification_for_client">Sign in</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="login">Log In</string>
+    <string name="username_hint">Username/Email/Phone</string>
+    <string name="username">Username</string>
+    <string name="fullname">Full Name</string>
+    <string name="prompt_phone">Mobile No.</string>
+    <string name="prompt_cnic">CNIC</string>
+    <string name="prompt_address">Address</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing emailcompletions."</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--<string name="place_key">AIzaSyCW64V0Ugrz0KC2wBpwnZeAgL79Q4nHyKg</string>-->
-    <string name="place_key">AIzaSyDAJ7SvT6p-dOXxVQ7ALmMXHiOeqqV7Mhc</string>
+    <string name="place_key" translatable="false">AIzaSyDAJ7SvT6p-dOXxVQ7ALmMXHiOeqqV7Mhc</string>
 
     <string name="startpecefullift">Start a Peacefull Life With</string>
     <string name="descriptiontext">The Betaar Company is the largest, most impressive, creative and forward-thinking Veterinary service provider company in Pakistan. At the core of your business philosophy is a commitment to extraordinary service, honesty, and clear communication.
@@ -437,59 +468,13 @@ In brief. You will feel the difference as soon as you walk into our offices, spe
     <string name="title_activity_history">History</string>
     <string name="title_activity_check_up">CheckUp</string>
 
-    <string name="terms_and_conditions">TERMS AND CONDITIONS:
+    <string name="terms_and_conditions">"TERMS AND CONDITIONS:          BETAAR Terms of Service Last update: Welcome to BETAAR.com.pk. BETAAR.com.pk is a veterinary marketplace platform for services performed by its users. The following terms and conditions (these Terms of Service), govern your access to and use of the BETAAR website, including any content, functionality and services offered on or through www.BETAAR.com.pk Please read the Terms of Service carefully before you start to use the Site. By using the Site, opening an account or by clicking to accept or agree to the Terms of Service when this option is made available to you, you accept and agree to be bound and abide by these Terms of Service and our Privacy Policy. If you do not want to agree to these Terms of Service or the Privacy Policy, you must not access or use the Site. For more detailed policies surrounding the activity and usage on the Site, please access the designated articles herein. By using this Site, you represent and warrant that you are of legal age to form a binding contract and meet all of the foregoing eligibility requirements. If you do not meet all of these requirements, you must not access or use the Site. Key Terms Vets are micro-job veterinarian’s on BETAAR. Rx are services of medicine prescription, treatments or recipe provided by vets. Fee are the earnings for vets, received from client after Rx. Call Vets is for clients to avail the checkup services of vets at door step for their animals. Offer jobs are veterinary jobs offered by organizations. Seeking Jobs is opportunity for registered vets to find veterinary related jobs. clients are the users who get the services of Vets on BETAAR. Products are the stuff offered for sale on BETAAR. Buyer are the users who buy the products on BETAAR. Vendor are users who offer their products for sale on BETAAR. A vendor can be organization, a client (for limited products). Product Page is for vendors to add Products. Orders are the formal agreement between a buyer and vendor after a purchase was made from the vendor’s Product Page. Order Page is where buyer and vendor communicate with each other in connection with an ordered Product. Disputes are disagreements experienced during an order between a buyer and vendor on BETAAR. Revenue is the money vendor earn from completed orders. Sales Balance is cleared Revenue from completed orders for vendor to withdraw or use to purchase Products. Shopping Balance is shopping credit collected from cancelled orders or BETAAR promotions to be used for purchasing Products. Overview \tOnly registered users may buy and sell on BETAAR. Registration is free. \tAfter completion of Rx Clients will receive a confirmation message with details of Rx provided to animals by vets. Clients pay only that amount, declared by BETAAR on vets fee page. \tCompulsory for Vets to create a security account and maintain the account with minimum limit of PKR1500.Vets collect only the BETAAR mentioned amount from client that will be shown on fee page after completion of Rx. 15% of the received amount deducted by BETAAR from the security account of vets. \tBuyer pay BETAAR in advance to create an order for products. \tFor payments please read the purchasing section here. \tvendor must fulfill their orders, and may not cancel orders on a regular basis or without cause. Cancelling orders will affect vendor’ reputation and status. \tBuyer Users may not offer or accept payments using any method other than placing an order to buy products through BETAAR.com \tWe care about your privacy. You can read our Privacy Policy here. The Privacy Policy is a part of these Terms of Service and incorporated herein by reference.      "</string>
 
-        BETAAR Terms of Service Last update:
-Welcome to BETAAR.com.pk. BETAAR.com.pk is a veterinary marketplace platform for services performed by its users.
-The following terms and conditions (these "Terms of Service"), govern your access to and use of the BETAAR website, including any content, functionality and services offered on or through www.BETAAR.com.pk
-Please read the Terms of Service carefully before you start to use the Site. By using the Site, opening an account or by clicking to accept or agree to the Terms of Service when this option is made available to you, you accept and agree to be bound and abide by these Terms of Service and our Privacy Policy. If you do not want to agree to these Terms of Service or the Privacy Policy, you must not access or use the Site. For more detailed policies surrounding the activity and usage on the Site, please access the designated articles herein.
-By using this Site, you represent and warrant that you are of legal age to form a binding contract and meet all of the foregoing eligibility requirements. If you do not meet all of these requirements, you must not access or use the Site.
-Key Terms
-Vets are micro-job veterinarian’s on BETAAR.
-Rx are services of medicine prescription, treatments or recipe provided by vets.
-Fee are the earnings for vets, received from client after Rx.
-Call Vets is for clients to avail the checkup services of vets at door step for their animals.
-Offer jobs are veterinary jobs offered by organizations.
-Seeking Jobs is opportunity for registered vets to find veterinary related jobs.
-clients are the users who get the services of Vets on BETAAR.
-Products are the stuff offered for sale on BETAAR.
-Buyer are the users who buy the products on BETAAR.
-Vendor are users who offer their products for sale on BETAAR. A vendor can be organization, a client (for limited products).
-Product Page is for vendors to add Products.
-Orders are the formal agreement between a buyer and vendor after a purchase was made from the vendor’s Product Page.
-Order Page is where buyer and vendor communicate with each other in connection with an ordered Product.
-Disputes are disagreements experienced during an order between a buyer and vendor on BETAAR.
-Revenue is the money vendor earn from completed orders.
-Sales Balance is cleared Revenue from completed orders for vendor to withdraw or use to purchase Products.
-Shopping Balance is shopping credit collected from cancelled orders or BETAAR promotions to be used for purchasing Products.
-Overview
-	Only registered users may buy and sell on BETAAR. Registration is free.
-	After completion of Rx Clients will receive a confirmation message with details of Rx provided to animals by vets. Clients pay only that amount, declared by BETAAR on vets fee page.
-	Compulsory for Vets to create a security account and maintain the account with minimum limit of PKR1500.Vets collect only the BETAAR mentioned amount from client that will be shown on fee page after completion of Rx. 15% of the received amount deducted by BETAAR from the security account of vets.
-	Buyer pay BETAAR in advance to create an order for products.
-	For payments please read the purchasing section here.
-	vendor must fulfill their orders, and may not cancel orders on a regular basis or without cause. Cancelling orders will affect vendor’ reputation and status.
-	Buyer Users may not offer or accept payments using any method other than placing an order to buy products through BETAAR.com
-	We care about your privacy. You can read our Privacy Policy here. The Privacy Policy is a part of these Terms of Service and incorporated herein by reference.
-
-    </string>
-
-    <string name="signup_help"><![CDATA[<p> If you sign up as a <font color="red">Veterinarian</font> you can avail the following benefits:<br/>
-•    You can sale products<br/>
-•    You can provide service as a veterinarian<br/>
-<br/>
-If you sign up as a <font color="red">Client</font> you can avail the following benefits:<br/>
-•    Sale products<br/>
-•    Buy products<br/>
-•    Get Services of a veterinarian<br/>
-<br/>
-If you sign up as an <font color="red">Organization</font> you can avail the following benefits:<br/>
-•    Sale Products<br/>
-•    Offer Jobs<br/> <p>]]>
-
-    </string>
+    <string name="signup_help">"<![CDATA[<p> If you sign up as a <font color="red">Veterinarian</font> you can avail the following benefits:<br/>•    You can provide service as a veterinarian<br/> <br/> If you sign up as a <font color="red">Client</font> you can avail the following benefits:<br/> •    Sale products<br/> •    Buy products<br/> •    Get Services of a veterinarian<br/> <br/> If you sign up as an <font color="red">Organization</font> you can avail the following benefits:<br/> •    Sale Products<br/> •    Offer Jobs<br/> <p>]]>      "</string>
 
     <string name="welcome_msg">Welcome!</string>
+    <string name="create_account">Don\'t have Account? Create Account.</string>
+    <string name="forgot_password">Forgot Password? Click Here</string>
     <string name="sign_out">Sign Out</string>
     <string name="contacts_permission_rationale">Access to account information is required to sign in.</string>
     <string name="invite_menu_label">Invite</string>
@@ -500,6 +485,39 @@ If you sign up as an <font color="red">Organization</font> you can avail the fol
     <string name="sign_up">Sign Up</string>
     <string name="fresh_config">Fresh Config</string>
     <string name="cause_crash">Cause Crash</string>
+    <string name="help_for_signup">Need help for whom to sign up?</string>
+    <string name="register_as_vet">Register as Veterinarian</string>
+    <string name="register_as_client">Register as Client</string>
+    <string name="register_as_org">Register as Organization</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="prompt_password">Password (Optional)</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="agreement">I agree to these </string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="prompt_pincode">Enter Pin Code</string>
+    <string name="verify">Verify</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="submit">Submit</string>
+    <string name="myproducts">My Products</string>
+    <string name="trackvisit">Track Visit</string>
+    <string name="history">History</string>
+    <string name="help">Help</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="logout">Log Out</string>
+    <string name="call_vet">Call Veterinarian</string>
+    <string name="farm_sol">Farm Solutions</string>
+    <string name="sale_product">Sale Product</string>
+    <string name="dairy_sol">Dairy Solutions</string>
+    <string name="pet_sol">Pets Solutions</string>
+    <string name="equine_sol">Equine Solutions</string>
+    <string name="birds_sol">Bird Solutions</string>
+    <string name="wildlife_sol">Wild Life Solutions</string>
+    <string name="birds">Birds</string>
+    <string name="equine">Equine</string>
+    <string name="pet">Pets</string>
+    <string name="dairy">Dairy</string>
+    <string name="wildlife">Wild Life</string>
 
 </resources>

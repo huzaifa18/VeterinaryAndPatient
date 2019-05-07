@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Birds Solutions"
+            android:text="@string/birds_sol"
             android:textColor="@color/colorWhite"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -50,7 +50,7 @@
                 android:layout_height="45dp"
                 android:entries="@array/dairy_categories"
                 android:backgroundTint="@color/colorWhite"
-                android:paddingLeft="4dp"
+                android:padding="2dp"
                 android:scrollbarThumbVertical="@drawable/scrollview_thumb"
                 android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"/>
 
@@ -89,7 +89,7 @@
 
                     <TextView
                         android:id="@+id/tv_call_vert"
-                        android:text="Call Veterinarian"
+                        android:text="@string/call_vet"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textColor="@color/colorWhite"
@@ -128,7 +128,7 @@
 
                     <TextView
                         android:id="@+id/tv_birds_solution"
-                        android:text="Birds Solution  "
+                        android:text="@string/birds_sol"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textColor="@color/colorWhite"
@@ -166,7 +166,7 @@
 
                     <TextView
                         android:id="@+id/tv_sale_birds"
-                        android:text="Sale Product          "
+                        android:text="@string/sale_product"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textColor="@color/colorWhite"

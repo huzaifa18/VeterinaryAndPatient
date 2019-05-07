@@ -45,6 +45,8 @@ public class FarmSolutionListing extends DrawerActivityForClient {
         category_id = i.getStringExtra("category_id");
         sub_category_id = i.getStringExtra("sub_category_id");
 
+        Log.e("TEST","SubCategory ID: " + sub_category_id);
+
         ini();
         setArray();
     }

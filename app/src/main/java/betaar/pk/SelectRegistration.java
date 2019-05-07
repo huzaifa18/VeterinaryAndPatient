@@ -48,7 +48,7 @@ public class SelectRegistration extends AppCompatActivity implements GoogleApiCl
     private Location mylocation;
     private GoogleApiClient googleApiClient;
     private final static int REQUEST_CHECK_SETTINGS_GPS = 0x1;
-    private final static int REQUEST_ID_MULTIPLE_PERMISSIONS=0x2;
+    private final static int REQUEST_ID_MULTIPLE_PERMISSIONS = 0x2;
 
     public LatLng mLatLng = null;
 
@@ -57,7 +57,6 @@ public class SelectRegistration extends AppCompatActivity implements GoogleApiCl
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_select_registration);
         setContentView(R.layout.custome_singup_screen);
-
 
         init();
         signupAsVeterinarian();
@@ -76,7 +75,7 @@ public class SelectRegistration extends AppCompatActivity implements GoogleApiCl
         bt_organization = (RelativeLayout) findViewById(R.id.bt_organization);
         tv_help = (TextView) findViewById(R.id.tv_help);
 
-        tv_help.setText(Html.fromHtml("<u>Need help for whom to signup?</u>"));
+        tv_help.setText(Html.fromHtml("<u>" + getResources().getString(R.string.help_for_signup) + "</u>"));
 
     }
 
@@ -86,15 +85,14 @@ public class SelectRegistration extends AppCompatActivity implements GoogleApiCl
             @Override
             public void onClick(View view) {
 
-               // mLatLng = new LatLng(32.2215454, 74.2545454);
+                // mLatLng = new LatLng(32.2215454, 74.2545454);
 
-                if (mLatLng!=null) {
+                if (mLatLng != null) {
                     Intent signupAsVeterinarian = new Intent(SelectRegistration.this, SignUpAsVeterinarian.class);
                     signupAsVeterinarian.putExtra("LAT", mLatLng.latitude);
                     signupAsVeterinarian.putExtra("LNG", mLatLng.longitude);
                     startActivity(signupAsVeterinarian);
-                }
-                else {
+                } else {
 
                     mLatLng = new LatLng(32.2215454, 74.2545454);
                     Intent signupAsVeterinarian = new Intent(SelectRegistration.this, SignUpAsVeterinarian.class);
@@ -112,7 +110,7 @@ public class SelectRegistration extends AppCompatActivity implements GoogleApiCl
             @Override
             public void onClick(View view) {
                 mLatLng = new LatLng(32.2215454, 74.2545454);
-                if (mLatLng!=null) {
+                if (mLatLng != null) {
                     Intent signupAsVeterinarian = new Intent(SelectRegistration.this, SignUpAsClient.class);
                     signupAsVeterinarian.putExtra("LAT", mLatLng.latitude);
                     signupAsVeterinarian.putExtra("LNG", mLatLng.latitude);
@@ -129,7 +127,7 @@ public class SelectRegistration extends AppCompatActivity implements GoogleApiCl
             @Override
             public void onClick(View view) {
                 mLatLng = new LatLng(32.2215454, 74.2545454);
-                if (mLatLng!=null) {
+                if (mLatLng != null) {
                     Intent signupAsVeterinarian = new Intent(SelectRegistration.this, SignUpAsOrganization.class);
                     signupAsVeterinarian.putExtra("LAT", mLatLng.latitude);
                     signupAsVeterinarian.putExtra("LNG", mLatLng.latitude);
@@ -139,12 +137,12 @@ public class SelectRegistration extends AppCompatActivity implements GoogleApiCl
         });
     }
 
-    private void help(){
+    private void help() {
 
         tv_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SelectRegistration.this,SignUpHelp.class));
+                startActivity(new Intent(SelectRegistration.this, SignUpHelp.class));
             }
         });
 

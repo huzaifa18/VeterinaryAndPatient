@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bakground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Verification Success"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/dialog_title_background"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/tv_messasge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="4dp"
+                android:text="Thank you! You have been verified successfully, please update your profile!"
+                android:textColor="@color/colorBlue"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/bt_complte_profile"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/button_press_syle"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/tv_complte_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp"
+                android:text="Complete Profile"/>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bt_not_now"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/button_press_syle"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/tv_second_button_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp"
+                    android:text="Not Now"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

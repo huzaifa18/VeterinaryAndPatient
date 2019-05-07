@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_wth_gradian">
-
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,104 +25,94 @@
             android:id="@+id/ll_buttons_iews"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_centerInParent="true"
-            android:gravity="center">
-
-
+            android:gravity="center"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/bt_call_a_veteriany"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_press_syle"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_press_syle">
 
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/ic_vertrinarian" />
 
-
-                    <android.support.v7.widget.AppCompatImageView
-                        android:id="@+id/imageView1"
-                        android:layout_marginRight="5dp"
-                        android:layout_width="20dp"
-                        android:layout_height="15dp"
-                        app:srcCompat="@drawable/ic_vertrinarian"
-                        android:layout_marginLeft="20dp"/>
-
-                    <TextView
-                        android:id="@+id/tv_veterinarian"
-                        android:text="Veterinarian"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorWhite"
-                        android:textAllCaps="false"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:layout_centerInParent="true"/>
-
-
-
-
+                <TextView
+                    android:id="@+id/tv_veterinarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/title_veterinary"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:id="@+id/bt_client"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_press_syle"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_press_syle">
 
-                    <android.support.v7.widget.AppCompatImageView
-                        android:id="@+id/imageView2"
-                        android:layout_marginRight="5dp"
-                        android:layout_width="20dp"
-                        android:layout_height="15dp"
-                        app:srcCompat="@drawable/ic_client"
-                        android:layout_marginLeft="20dp"/>
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/ic_client" />
 
-                    <TextView
-                        android:id="@+id/tv_client"
-                        android:text="Client"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorWhite"
-                        android:textAllCaps="false"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_client"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/title_client"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:id="@+id/bt_organization"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_press_syle"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_press_syle">
 
-                    <android.support.v7.widget.AppCompatImageView
-                        android:id="@+id/imageView3"
-                        android:layout_marginRight="5dp"
-                        android:layout_width="20dp"
-                        android:layout_height="15dp"
-                        app:srcCompat="@drawable/ic_organization"
-                        android:layout_marginLeft="20dp"/>
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/ic_organization" />
 
-                    <TextView
-                        android:id="@+id/tv_organization"
-                        android:text="Organization"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorWhite"
-                        android:textAllCaps="false"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/tv_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/title_organization"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -132,10 +120,10 @@
                 android:id="@+id/tv_help"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Need help for whom to signup?"
-                android:textColor="@color/color_pure_red"
                 android:layout_marginTop="12dp"
-                android:textSize="13sp"/>
+                android:text="@string/help_for_signup"
+                android:textColor="@color/color_pure_red"
+                android:textSize="13sp" />
 
         </LinearLayout>
 

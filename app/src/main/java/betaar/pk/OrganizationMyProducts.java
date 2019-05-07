@@ -106,7 +106,7 @@ public class OrganizationMyProducts extends DrawerActivityForVeterinarian {
 
             @Override
             public void onResponse(String response) {
-                Log.e("TAG", "Login response Response: " + response.toString());
+                Log.e("TAG", "My Products Response: " + response.toString());
 
                 progress_logo.clearAnimation();
                 progress_logo.setVisibility(View.GONE);
@@ -303,6 +303,7 @@ public class OrganizationMyProducts extends DrawerActivityForVeterinarian {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("key", API.KEY);
                 params.put("user_id", user_id);
+                Log.e("TAG","USER ID: " + user_id);
 
                 return params;
             }

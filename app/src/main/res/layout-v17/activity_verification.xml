@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wth_gradian"
+    tools:context="betaar.pk.VerificationActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="@string/prompt_pincode"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_verify_fields"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_firt_digit"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/colorRed"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/et_second_digit"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/colorRed"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/et_thirld_digit"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/colorRed"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/et_fourth_digit"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/colorRed"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_press_syle"
+        android:text="@string/verify"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/tv_resent_code"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/resend_code"
+        android:textColor="@color/color_pure_red"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/progress_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logi_icon"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

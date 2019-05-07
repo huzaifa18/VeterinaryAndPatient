@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-
     <android.support.design.widget.NavigationView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -23,12 +22,9 @@
         app:menu="@menu/drawermenu"
         android:background="@color/colorWhite"
         app:itemTextColor="@color/colorBlack"
-        app:headerLayout="@layout/header">
-
+        app:headerLayout="@layout/header"
+        android:layoutDirection="ltr">
 
     </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
-
-
-

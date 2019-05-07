@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bakground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Enter Number of Animals"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/dialog_title_background"/>
+
+
+        <RadioGroup
+            android:id="@+id/dialog_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="@color/colorGreen"
+            android:layout_gravity="center_horizontal">
+
+            <!--<RadioButton
+                android:id="@+id/rd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insemination"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlue"
+                android:backgroundTint="@color/colorGreen"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P-Test"
+                android:textSize="12sp"
+                android:backgroundTint="@color/colorGreen"
+                android:textColor="@color/colorBlue" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dystokia"
+                android:textSize="12sp"
+                android:backgroundTint="@color/colorGreen"
+                android:textColor="@color/colorBlue"/>-->
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/et_width"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:layout_marginStart="6dp"
+                android:text="No. of Animals: "
+
+                android:textColor="@color/colorBlue"/>
+
+            <EditText
+                android:id="@+id/dialog_edit_text"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/et_width"
+                android:background="@drawable/dialog_edittext_background"
+                android:hint="Numbers"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="10dp"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/bt_dialog_find"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Find"
+            android:textSize="9sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_press_syle"/>
+
+    </LinearLayout>
+</RelativeLayout>

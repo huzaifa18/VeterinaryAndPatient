@@ -1,8 +1,12 @@
 package betaar.pk;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -29,11 +33,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import betaar.pk.Config.API;
+import betaar.pk.LocaleHelper.LocaleHelper;
 import betaar.pk.Preferences.Prefs;
 import betaar.pk.Services.UpdateLatLong;
 import betaar.pk.VolleyLibraryFiles.AppSingleton;
@@ -48,11 +54,13 @@ public class UserLoginActivity extends AppCompatActivity {
     ImageView progress_logo;
     Animation rotate;
 
+    Resources resources;
+    Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-          setContentView(R.layout.custome_login_screen);
-        //setContentView(R.layout.activity_user_login);
+        this.setContentView(R.layout.custome_login_screen);
 
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
@@ -70,6 +78,20 @@ public class UserLoginActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleHelper.onAttach(base,"ur"));
+    }
+
+    public void relaunch(Activity activity) {
+        Intent intent = new Intent(activity, SplashScreen.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        activity.startActivity(intent);
+        Runtime.getRuntime().exit(0);
+        activity.finish();
+    }
+
     private void init(){
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
        // getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(UserLoginActivity.this ,R.color.colorBlue)));
@@ -81,6 +103,12 @@ public class UserLoginActivity extends AppCompatActivity {
 
         et_email = (EditText) findViewById(R.id.et_email);
         et_password = (EditText) findViewById(R.id.et_password);
+
+        context = LocaleHelper.setLocale(UserLoginActivity.this, "ur");
+        resources = context.getResources();
+        bt_login.setText(resources.getString(R.string.login));
+        tv_new_account.setText(resources.getString(R.string.create_account));
+        tv_forgot_password.setText(resources.getString(R.string.forgot_password));
 
 
         progress_logo = (ImageView) findViewById(R.id.progress_logo);
@@ -112,6 +140,7 @@ public class UserLoginActivity extends AppCompatActivity {
                     Intent i = new Intent(UserLoginActivity.this, DashBoardOrganization.class);
                     startActivity(i);
                 }*/
+                //relaunch(UserLoginActivity.this);
 
                 if (textUsername.length()==0){
 

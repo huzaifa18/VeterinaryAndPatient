@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="betaar.pk.FarmSolutionForBirds"
+    android:background="@drawable/background_wth_gradian">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/relativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif"
+        android:text="Birds Solution"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerInParent="true">
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_buttons"
+            android:layout_below="@+id/rl_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_accessories_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_accessories"/>
+
+                    <TextView
+                        android:id="@+id/bt_accessories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_gravity="center_horizontal"
+                        android:textAllCaps="false"
+                        android:text="Accessories"
+                        android:textSize="12sp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorWhite"
+                        android:textAlignment="center"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_feed_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_feed"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_feed"/>
+
+                    <TextView
+                        android:id="@+id/bt_feed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_gravity="center_horizontal"
+                        android:textAllCaps="false"
+                        android:text="Feed"
+                        android:textSize="12sp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorWhite"
+                        android:textAlignment="center"/>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_animal_sale_per"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_animals"/>
+
+                    <TextView
+                        android:id="@+id/bt_animals_sale_pur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingStart="7dp"
+                        android:text="Birds (Sale &amp; Pur)"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="11sp" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_vaccinations_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_veccination"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_vaccination"/>
+
+                    <TextView
+                        android:id="@+id/bt_veccinatin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Vaccinations"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_medicine_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_meidcine_products"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_medicineproducts"/>
+
+                    <TextView
+                        android:id="@+id/bt_medicine_products"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_gravity="center_horizontal"
+                        android:textAllCaps="false"
+                        android:text="Medicine Products"
+                        android:textSize="12sp"
+                        android:paddingStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorWhite"
+                        android:textAlignment="center"/>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_shed_construction_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_shed_cons"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_shedconstruction"/>
+
+                    <TextView
+                        android:id="@+id/bt_shed_constructions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingStart="6dp"
+                        android:text="Cages/Sheds Const"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="11sp" />
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_labs_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_labs"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_labs"/>
+
+                    <TextView
+                        android:id="@+id/bt_labs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Labs"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_labour_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_labour"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_labour"/>
+
+                    <TextView
+                        android:id="@+id/bt_labor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_gravity="center_horizontal"
+                        android:textAllCaps="false"
+                        android:text="Labour"
+                        android:textSize="12sp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorWhite"
+                        android:textAlignment="center"/>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_labs_labor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/et_width"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_egg_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_agricultur_land"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_eggs"/>
+
+                    <TextView
+                        android:id="@+id/bt_egg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Egg (Sale &amp; Pur)"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_shed_for_rent_birds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_width"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_press_syle">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_pesticides"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/ic_shedforrent"/>
+
+                    <TextView
+                        android:id="@+id/bt_shed_for_rent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/et_width"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Shed For Rent"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -347,6 +347,18 @@ public class SignUpAsClient extends AppCompatActivity implements GoogleApiClient
                 params.put("lng", lng);
                 params.put("udid", UDID_TOKEN);
 
+                Log.e("SignUp",params.toString());
+                Log.e("SignUp","name: " + fullname);
+                Log.e("SignUp","username: " + username);
+                Log.e("SignUp","email: " + email);
+                Log.e("SignUp","phone: " + mPhone);
+                Log.e("SignUp","cnic: " + cnic);
+                Log.e("SignUp","add: " + address);
+                Log.e("SignUp","pass: " + password);
+                Log.e("SignUp","lat: " + lat);
+                Log.e("SignUp","lng: " + lng);
+                Log.e("SignUp","udid: " + UDID_TOKEN);
+
 
                 return params;
             }

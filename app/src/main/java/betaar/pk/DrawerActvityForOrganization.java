@@ -115,6 +115,7 @@ public class DrawerActvityForOrganization extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.logout){
 
                     API.logoutService(DrawerActvityForOrganization.this);
+                    finish();
 
                 }
 

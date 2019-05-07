@@ -141,7 +141,7 @@
                         android:layout_gravity="center_horizontal"
                         android:textAllCaps="false"
                         android:paddingLeft="7dp"
-                        android:text="Animals (Sale &amp; Pur)"
+                        android:text="Animals(sale &amp; purc)"
                         android:textSize="11sp"
                         android:layout_centerInParent="true"
                         android:textColor="@color/colorWhite"

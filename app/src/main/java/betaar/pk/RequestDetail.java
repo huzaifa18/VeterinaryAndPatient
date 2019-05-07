@@ -110,6 +110,8 @@ public class RequestDetail extends AppCompatActivity {
         setData();
         acceptButtonClickListener();
         cancelButtonClickListener();
+
+        Log.e("TEST","Cancel BTN TXT: " + tv_btn_cancel.getText().toString());
         
     }
 

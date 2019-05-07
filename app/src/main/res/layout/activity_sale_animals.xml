@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="betaar.pk.OrganizationSaleProductActivity"
-    android:background="@drawable/background_wth_gradian">
-
+    android:background="@drawable/background_wth_gradian"
+    tools:context="betaar.pk.OrganizationSaleProductActivity">
 
 
     <LinearLayout
@@ -18,8 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/relativeLayout"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_margin="20dp">
 
             <TextView
@@ -40,6 +39,7 @@
             android:layout_height="match_parent"
             android:fadeScrollbars="true"
             android:scrollbarStyle="insideInset">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -56,7 +56,8 @@
                         android:layout_height="@dimen/et_width"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
-                        android:background="@drawable/spiner_background">
+                        android:background="@drawable/spiner_background"
+                        android:padding="5dp">
 
                         <Spinner
                             android:id="@+id/sp_select_product_type"
@@ -64,7 +65,7 @@
                             android:layout_height="45dp"
                             android:backgroundTint="@color/colorWhite"
                             android:entries="@array/product_types"
-                            android:paddingLeft="4dp" />
+                            android:padding="2dp" />
 
                     </RelativeLayout>
 
@@ -72,11 +73,12 @@
                         android:id="@+id/rl_spiner_product_category"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/et_width"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="30dp"
                         android:animateLayoutChanges="true"
-                        android:background="@drawable/spiner_background">
+                        android:background="@drawable/spiner_background"
+                        android:padding="5dp">
 
                         <Spinner
                             android:id="@+id/sp_select_product_category"
@@ -84,7 +86,7 @@
                             android:layout_height="45dp"
                             android:backgroundTint="@color/colorWhite"
                             android:entries="@array/product_categories"
-                            android:paddingLeft="4dp" />
+                            android:padding="2dp" />
 
 
                     </RelativeLayout>
@@ -93,11 +95,12 @@
                         android:id="@+id/rl_spiner_product_sub_category"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/et_width"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="30dp"
                         android:animateLayoutChanges="true"
-                        android:background="@drawable/spiner_background">
+                        android:background="@drawable/spiner_background"
+                        android:padding="5dp">
 
                         <Spinner
                             android:id="@+id/sp_select_product_sub_category"
@@ -105,9 +108,9 @@
                             android:layout_height="45dp"
                             android:backgroundTint="@color/colorWhite"
                             android:entries="@array/product_categories_for_dairy"
-                            android:paddingLeft="4dp"
+                            android:padding="2dp"
                             android:scrollbarThumbVertical="@drawable/scrollview_thumb"
-                            android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"/>
+                            android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack" />
 
 
                     </RelativeLayout>
@@ -117,24 +120,26 @@
                         android:id="@+id/et_product_name"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/et_width"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
                         android:background="@drawable/et_background1"
                         android:hint="Product Name"
-                        android:textColorHint="@color/colorETHint"
+                        android:maxLines="1"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:textSize="14sp"
-                        android:maxLines="1"
-                        android:layout_gravity="center_horizontal"
                         android:singleLine="true"
                         android:textColor="@color/colorBlack"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp"/>
+                        android:textColorHint="@color/colorETHint"
+                        android:textSize="14sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
@@ -145,15 +150,15 @@
                             android:layout_marginLeft="30dp"
                             android:layout_weight="1"
                             android:animateLayoutChanges="true"
-                            android:background="@drawable/spiner_background">
+                            android:background="@drawable/spiner_background"
+                            android:paddingLeft="5dp">
 
                             <Spinner
                                 android:id="@+id/sp_select_quantity"
                                 android:layout_width="match_parent"
-                                android:layout_height="45dp"
+                                android:layout_height="35dp"
                                 android:backgroundTint="@color/colorWhite"
-                                android:scrollbarThumbVertical="@drawable/scrollview_thumb"
-                                android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack" />
+                                android:padding="2dp" />
 
 
                         </RelativeLayout>
@@ -162,19 +167,19 @@
                             android:id="@+id/rl_spiner_price_unit"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/et_width"
-                            android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:animateLayoutChanges="true"
-                            android:background="@drawable/spiner_background">
+                            android:background="@drawable/spiner_background"
+                            android:paddingLeft="5dp">
 
                             <Spinner
                                 android:id="@+id/sp_select_price_unit"
                                 android:layout_width="match_parent"
-                                android:layout_height="45dp"
+                                android:layout_height="35dp"
                                 android:backgroundTint="@color/colorWhite"
-                                android:scrollbarThumbVertical="@drawable/scrollview_thumb"
-                                android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack" />
+                                android:padding="2dp" />
 
 
                         </RelativeLayout>
@@ -184,8 +189,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/et_width"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginRight="30dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginRight="30dp"
                             android:layout_weight="1"
                             android:background="@drawable/et_background1"
                             android:hint="Price"
@@ -203,31 +208,31 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="30dp"
                         android:text="Product Images: "
                         android:textColor="@color/colorRed"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginTop="20dp"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
 
 
                         <RelativeLayout
                             android:id="@+id/rl_image_1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
-                            android:layout_weight="1"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp">
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary">
 
                             <TextView
                                 android:id="@+id/tx_image_1"
@@ -235,13 +240,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:text="Image 1"
-                                android:textColor="@color/colorWhite"/>
+                                android:textColor="@color/colorWhite" />
 
                             <ImageView
                                 android:id="@+id/tv_image_1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
+                                android:layout_height="match_parent" />
 
                         </RelativeLayout>
 
@@ -249,9 +253,9 @@
                             android:id="@+id/rl_image_2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
+                            android:layout_marginRight="10dp"
                             android:layout_weight="1"
-                            android:layout_marginRight="10dp">
+                            android:background="@color/colorPrimary">
 
                             <TextView
                                 android:id="@+id/tx_image_2"
@@ -259,12 +263,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:text="Image 2"
-                                android:textColor="@color/colorWhite"/>
+                                android:textColor="@color/colorWhite" />
+
                             <ImageView
                                 android:id="@+id/tv_image_2"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
+                                android:layout_height="match_parent" />
 
                         </RelativeLayout>
 
@@ -274,20 +278,20 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
 
 
                         <RelativeLayout
                             android:id="@+id/rl_image_3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
-                            android:layout_weight="1"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp">
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary">
 
                             <TextView
                                 android:id="@+id/tx_image_3"
@@ -295,13 +299,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:text="Image 3"
-                                android:textColor="@color/colorWhite"/>
+                                android:textColor="@color/colorWhite" />
 
                             <ImageView
                                 android:id="@+id/tv_image_3"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
+                                android:layout_height="match_parent" />
 
                         </RelativeLayout>
 
@@ -309,9 +312,9 @@
                             android:id="@+id/rl_image_4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
+                            android:layout_marginRight="10dp"
                             android:layout_weight="1"
-                            android:layout_marginRight="10dp">
+                            android:background="@color/colorPrimary">
 
                             <TextView
                                 android:id="@+id/tx_image_4"
@@ -319,16 +322,14 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:text="Image 4"
-                                android:textColor="@color/colorWhite"/>
+                                android:textColor="@color/colorWhite" />
 
                             <ImageView
                                 android:id="@+id/tv_image_4"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:scaleType="fitXY"/>
+                                android:layout_height="match_parent" />
 
                         </RelativeLayout>
-
 
                     </LinearLayout>
 
@@ -336,35 +337,36 @@
                         android:id="@+id/et_product_description"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="35dp"
                         android:background="@drawable/et_background"
-                        android:hint="Description"
-                        android:textColorHint="@color/colorETHint"
-                        android:paddingLeft="10dp"
                         android:gravity="top"
+                        android:hint="Description"
+                        android:paddingLeft="10dp"
                         android:paddingTop="10dp"
                         android:paddingRight="4dp"
-                        android:textSize="14sp"
                         android:textColor="@color/colorBlack"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="35dp"
-                        android:layout_marginRight="35dp"/>
+                        android:textColorHint="@color/colorETHint"
+                        android:textSize="14sp" />
 
                     <RelativeLayout
                         android:id="@+id/rl_bt_post"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
-                        android:background="@drawable/button_press_syle"
                         android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="20dp"
-                        android:layout_marginTop="15dp">
+                        android:background="@drawable/button_press_syle">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:text="Post"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorWhite"/>
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold" />
                     </RelativeLayout>
 
 
@@ -379,10 +381,10 @@
 
     <ImageView
         android:id="@+id/progress_logo"
-        android:layout_centerInParent="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_centerInParent="true"
         android:src="@drawable/logi_icon"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </RelativeLayout>

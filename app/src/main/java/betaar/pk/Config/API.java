@@ -47,8 +47,8 @@ public class API {
     static CustomProgressDialog progressDialog;
 
     public static final String KEY = "!44zpt$Y@QC2Udm$nmBr6XVkyUbkNA3X?k*pr8kUb*%gG";
-    public static final String BASE_URL = "http://ranglerz.net/betaar/betaar-my-api/";
-    //public static final String BASE_URL = "http://betaar.pk/betaar-my-api/";
+    //public static final String BASE_URL = "http://ranglerz.net/betaar/betaar-my-api/";
+    public static final String BASE_URL = "http://betaar.pk/betaar-my-api/";
     public static final String Login = BASE_URL+"login";
     public static final String Logout = BASE_URL+"logout";
     public static final String ForgotPassword = BASE_URL+"forgot-password";
@@ -137,7 +137,7 @@ public class API {
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 context.startActivity(i);
                 context.stopService(new Intent(context, UpdateLatLong.class));
-                DrawerActivityForVeterinarian.fa.finish();
+                //DrawerActivityForVeterinarian.fa.finish();
             }
         });
 
@@ -177,6 +177,7 @@ public class API {
                         showLogoutDialogue(context);
 
                     } else {
+
                         String message = jObj.getString("msg");
                         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
 

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public class Prefs {
 
-
     public static void addingUserUDID(Context context, final String userUDID){
         SharedPreferences userUDIDPref = context.getSharedPreferences("betaar_udid", 0);
         SharedPreferences.Editor editor = userUDIDPref.edit();

@@ -120,7 +120,7 @@ public class DrawerActivityForVeterinarian extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.logout){
 
                     API.logoutService(DrawerActivityForVeterinarian.this);
-                    //finish();
+                    finish();
 
                 }
 

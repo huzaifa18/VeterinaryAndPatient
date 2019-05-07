@@ -63,6 +63,7 @@ public class VerificationActivity extends AppCompatActivity {
         submitClickListener();
         resentCode();
         textChangeListenerForField();
+
     }
 
     private void init(){

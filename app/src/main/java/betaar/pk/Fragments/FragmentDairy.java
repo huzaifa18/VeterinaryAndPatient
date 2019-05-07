@@ -64,14 +64,13 @@ public class FragmentDairy extends Fragment {
         setRetainInstance(true);
 
 
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View v =inflater.inflate(R.layout.dairy_fragment, container, false);
+        final View v = inflater.inflate(R.layout.dairy_fragment, container, false);
 
         init(v);
         callingVeterinaryActivity();
@@ -82,7 +81,7 @@ public class FragmentDairy extends Fragment {
         return v;
     }
 
-    private void init(View view){
+    private void init(View view) {
 
         sp_select_dairy_category = (Spinner) view.findViewById(R.id.sp_select_dairy_category);
         bt_call_a_veteriany = (RelativeLayout) view.findViewById(R.id.bt_call_a_veteriany);
@@ -123,20 +122,20 @@ public class FragmentDairy extends Fragment {
 
     }
 
-    private void callingVeterinaryActivity(){
+    private void callingVeterinaryActivity() {
 
         bt_call_a_veteriany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-               // showDialogue();
+                // showDialogue();
 
                 /*getActivity().startActivity(new Intent(getActivity(), ChatActivityMain.class));
                 getActivity().finish();*/
 
                 final Animation animShake = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
 
-                if (sp_select_dairy_category.getSelectedItemPosition() == 0){
+                if (sp_select_dairy_category.getSelectedItemPosition() == 0) {
 
                     Toast.makeText(getContext(), "Please Select Dairy Category", Toast.LENGTH_SHORT).show();
                     rl_spiner.setAnimation(animShake);
@@ -154,7 +153,7 @@ public class FragmentDairy extends Fragment {
         });
     }
 
-    private void farmSolutionActivity(){
+    private void farmSolutionActivity() {
 
         bt_farm_solutino.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,13 +162,13 @@ public class FragmentDairy extends Fragment {
                 //showDialogue();
                 Intent farmSolution = new Intent(getActivity(), FarmSolutionForDairy.class);
                 farmSolution.putExtra("from", "dairy");
-                farmSolution.putExtra("category_id", Arrays.getID(Arrays.product_types,"Dairy Solution"));
+                farmSolution.putExtra("category_id", Arrays.getID(Arrays.product_types, "Dairy Solution"));
                 getActivity().startActivity(farmSolution);
             }
         });
     }
 
-    private void btSaleDairyClickHanlder(){
+    private void btSaleDairyClickHanlder() {
 
         bt_sale_dairy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,19 +183,19 @@ public class FragmentDairy extends Fragment {
 
                 }else {*/
 
-                   // String selectedItem = sp_select_dairy_category.getSelectedItem().toString();
-                    Intent i = new Intent(getActivity(), SaleAnimals.class);
-                    i.putExtra("type", "Dairy");
-                    i.putExtra("category_id", Arrays.getID(Arrays.product_types,"Dairy Solution"));
-                    //i.putExtra("item", selectedItem);
-                    startActivity(i);
+                // String selectedItem = sp_select_dairy_category.getSelectedItem().toString();
+                Intent i = new Intent(getActivity(), SaleAnimals.class);
+                i.putExtra("type", "Dairy");
+                i.putExtra("category_id", Arrays.getID(Arrays.product_types, "Dairy Solution"));
+                //i.putExtra("item", selectedItem);
+                startActivity(i);
 
                 //}
             }
         });
     }
 
-    private void showDialogue(){
+    private void showDialogue() {
 
         final Dialog dialog = new Dialog(getContext());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

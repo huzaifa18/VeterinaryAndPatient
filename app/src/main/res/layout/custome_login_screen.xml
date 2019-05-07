@@ -30,7 +30,7 @@
                 android:layout_width="220dp"
                 android:layout_height="@dimen/et_width"
                 android:background="@drawable/et_background1"
-                android:hint="Username"
+                android:hint="@string/username_hint"
                 android:textColorHint="@color/colorETHint"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -39,28 +39,29 @@
                 android:singleLine="true"
                 android:textColor="@color/colorBlack"
                 android:layout_marginTop="4dp"/>
+
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="220dp"
                 android:layout_height="@dimen/et_width"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/et_background1"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:hint="Password"
-                android:maxLines="1"
                 android:singleLine="true"
-                android:inputType="textPassword"
                 android:textColor="@color/colorBlack"
-                android:textSize="14sp"
                 android:textColorHint="@color/colorETHint"
-                android:background="@drawable/et_background1"/>
+                android:textSize="14sp"/>
 
             <Button
                 android:id="@+id/bt_login"
                 android:layout_width="220dp"
                 android:layout_height="@dimen/bt_width"
                 android:background="@drawable/button_press_syle"
-                android:text="Login"
+                android:text="@string/login"
                 android:textAlignment="center"
                 android:paddingBottom="6dp"
                 android:textAllCaps="false"
@@ -72,7 +73,7 @@
                 android:id="@+id/tv_new_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have Account? Create Account."
+                android:text="@string/create_account"
                 android:textColor="@color/color_pure_red"
                 android:layout_marginTop="12dp"
                 android:textSize="13sp"/>
@@ -81,7 +82,7 @@
                 android:id="@+id/tv_forgot_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgot Password? Click Here"
+                android:text="@string/forgot_password"
                 android:textColor="@color/colorWhite"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="20dp"

@@ -340,7 +340,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             String created_at;
             created_at = obj.getString("created_at");
 
-            if (remoteMessage.getData().get("type").equals("confirm_finish_visit") || remoteMessage.getData().get("type").equals("request_received_to_vet")) {
+            if (remoteMessage.getData().get("type").equals("request_received_to_vet")) {
 
                 JSONObject obj1 = obj.getJSONObject("sender");
 

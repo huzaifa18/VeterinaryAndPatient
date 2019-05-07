@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.location.Location;
 import android.os.Build;
 import android.os.Handler;
@@ -54,6 +55,7 @@ import java.util.Map;
 
 import betaar.pk.Adapters.ListingAdapterCheckupRequest;
 import betaar.pk.Config.API;
+import betaar.pk.LocaleHelper.LocaleHelper;
 import betaar.pk.Models.MedData;
 import betaar.pk.Models.MedGroups;
 import betaar.pk.Models.RequestModelVet;
@@ -80,10 +82,16 @@ public class SplashScreen extends AppCompatActivity implements GoogleApiClient.C
 
     ArrayList<MedData> meds;
 
+    Resources resources;
+    Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        context = LocaleHelper.setLocale(SplashScreen.this, "ur");
+        resources = context.getResources();
 
         progress_logo = (ImageView) findViewById(R.id.progress_logo);
         progress_logo.bringToFront();

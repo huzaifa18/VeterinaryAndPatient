@@ -40,8 +40,6 @@ public class Birds extends Fragment {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
 
-
-
     }
 
     @Override

@@ -1,11 +1,14 @@
 package betaar.pk;
 
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 public class AboutUs extends AppCompatActivity {
 
@@ -17,6 +20,7 @@ public class AboutUs extends AppCompatActivity {
         getSupportActionBar().setTitle("About Us");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(AboutUs.this ,R.color.colorBlue)));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override

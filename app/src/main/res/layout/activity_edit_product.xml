@@ -81,15 +81,14 @@
                             android:layout_marginLeft="30dp"
                             android:layout_weight="1"
                             android:animateLayoutChanges="true"
+                            android:paddingLeft="5dp"
                             android:background="@drawable/spiner_background">
 
                             <Spinner
                                 android:id="@+id/sp_select_quantity"
                                 android:layout_width="match_parent"
-                                android:layout_height="45dp"
-                                android:backgroundTint="@color/colorWhite"
-                                android:scrollbarThumbVertical="@drawable/scrollview_thumb"
-                                android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack" />
+                                android:layout_height="35dp"
+                                android:backgroundTint="@color/colorWhite" />
 
 
                         </RelativeLayout>
@@ -102,15 +101,14 @@
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:animateLayoutChanges="true"
+                            android:paddingLeft="5dp"
                             android:background="@drawable/spiner_background">
 
                             <Spinner
                                 android:id="@+id/sp_select_price_unit"
                                 android:layout_width="match_parent"
-                                android:layout_height="45dp"
-                                android:backgroundTint="@color/colorWhite"
-                                android:scrollbarThumbVertical="@drawable/scrollview_thumb"
-                                android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack" />
+                                android:layout_height="35dp"
+                                android:backgroundTint="@color/colorWhite" />
 
 
                         </RelativeLayout>

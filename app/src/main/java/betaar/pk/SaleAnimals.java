@@ -151,7 +151,7 @@ public class SaleAnimals extends AppCompatActivity {
         sp_select_quantity = (Spinner) findViewById(R.id.sp_select_quantity);
         SpinnerListingAdapter quantityUnit = new SpinnerListingAdapter(getApplicationContext(), Arrays.quantity);
         sp_select_quantity.setAdapter(quantityUnit);
-        priceUnit.notifyDataSetChanged();
+        quantityUnit.notifyDataSetChanged();
 
         rl_image_1 = (RelativeLayout) findViewById(R.id.rl_image_1);
         rl_image_2 = (RelativeLayout) findViewById(R.id.rl_image_2);
@@ -928,9 +928,7 @@ public class SaleAnimals extends AppCompatActivity {
         }
 
         //The gson builder
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
+        Gson gson = new GsonBuilder().setLenient().create();
 
         OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
                 .connectTimeout(220, TimeUnit.SECONDS)
@@ -955,7 +953,6 @@ public class SaleAnimals extends AppCompatActivity {
         //creating a call and calling the upload image method
 
         Call<responseAddProduct> call = service.saleAnimal(key, productname, categoryname , subcategoryname , internalsubcategory , userid , pricee , unit , descriptionn , photo_type , fileToUpload1, fileToUpload2, fileToUpload3, fileToUpload4 );
-
 
 //        , fileToUpload1, fileToUpload2, fileToUpload3, fileToUpload4
 

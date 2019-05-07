@@ -32,7 +32,7 @@ import betaar.pk.Fragments.FregamentEquin;
 
 public class DashboardClient extends DrawerActivityForClient {
 
-  //  private TabLayout tabLayout;
+    //  private TabLayout tabLayout;
     public static ViewPager viewPager;
     RelativeLayout tab_rl_diary, tab_rl_pets, tab_rl_equine, tab_rl_birds, tab_rl_other;
     android.support.v7.widget.AppCompatImageView tab_iv_dairy, tab_iv_pets, tab_iv_equine, tab_iv_birds, tab_iv_other;
@@ -50,7 +50,6 @@ public class DashboardClient extends DrawerActivityForClient {
         View contentView = inflater.inflate(R.layout.activity_client_dashboard, null, false);
         mDrawerLayout.addView(contentView, 0);
 
-
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
@@ -64,9 +63,10 @@ public class DashboardClient extends DrawerActivityForClient {
         onBirdsTabClickListener();
         onOtherTabClickListener();
         viewPagerTabChangeListner();
+
     }
 
-    private void init(){
+    private void init() {
 
         tab_rl_diary = (RelativeLayout) findViewById(R.id.tab_rl_diary);
         tab_rl_pets = (RelativeLayout) findViewById(R.id.tab_rl_pets);
@@ -86,11 +86,9 @@ public class DashboardClient extends DrawerActivityForClient {
         tab_tv_birds = (TextView) findViewById(R.id.tab_tv_birds);
         tab_tv_other = (TextView) findViewById(R.id.tab_tv_other);
 
-
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         viewPager.setOffscreenPageLimit(4);
-
 
      /*   tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
@@ -114,8 +112,6 @@ public class DashboardClient extends DrawerActivityForClient {
         tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
         tab_iv_dairy.setImageResource(R.drawable.ic_dairyblue);
         viewPager.setCurrentItem(0);
-
-
 
 
     }
@@ -161,7 +157,7 @@ public class DashboardClient extends DrawerActivityForClient {
         }
     }
 
-    private void onDairyTabClickListener(){
+    private void onDairyTabClickListener() {
 
         tab_rl_diary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -193,7 +189,7 @@ public class DashboardClient extends DrawerActivityForClient {
         });
     }
 
-    private void onPetTabClickListener(){
+    private void onPetTabClickListener() {
 
         tab_rl_pets.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -225,7 +221,7 @@ public class DashboardClient extends DrawerActivityForClient {
         });
     }
 
-    private void onEquineTabClickListener(){
+    private void onEquineTabClickListener() {
 
         tab_rl_equine.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -257,7 +253,7 @@ public class DashboardClient extends DrawerActivityForClient {
         });
     }
 
-    private void onBirdsTabClickListener(){
+    private void onBirdsTabClickListener() {
 
         tab_rl_birds.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -289,7 +285,7 @@ public class DashboardClient extends DrawerActivityForClient {
         });
     }
 
-    private void onOtherTabClickListener(){
+    private void onOtherTabClickListener() {
 
         tab_rl_other.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -321,7 +317,7 @@ public class DashboardClient extends DrawerActivityForClient {
         });
     }
 
-    private void viewPagerTabChangeListner(){
+    private void viewPagerTabChangeListner() {
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -334,132 +330,132 @@ public class DashboardClient extends DrawerActivityForClient {
 
                 Log.e("TAG", "the selected page position is: " + position);
 
-                switch (position){
+                switch (position) {
 
                     case 0:
-                    //if (position == 0){
-                    tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
-                    tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
-                    tab_iv_dairy.setImageResource(R.drawable.ic_dairyblue);
+                        //if (position == 0){
+                        tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
+                        tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
+                        tab_iv_dairy.setImageResource(R.drawable.ic_dairyblue);
 
-                    tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_pets.setImageResource(R.drawable.ic_pets);
+                        tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_pets.setImageResource(R.drawable.ic_pets);
 
-                    tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_equine.setImageResource(R.drawable.ic_equine);
+                        tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_equine.setImageResource(R.drawable.ic_equine);
 
-                    tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_birds.setImageResource(R.drawable.ic_birds);
+                        tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_birds.setImageResource(R.drawable.ic_birds);
 
-                    tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_other.setImageResource(R.drawable.ic_others);
+                        tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_other.setImageResource(R.drawable.ic_others);
 
-                    break;
-                //}
+                        break;
+                    //}
                     case 1:
                         //if (position == 1){
-                    tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
+                        tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
 
-                    tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
-                    tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
-                    tab_iv_pets.setImageResource(R.drawable.ic_petsblue);
+                        tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
+                        tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
+                        tab_iv_pets.setImageResource(R.drawable.ic_petsblue);
 
-                    tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_equine.setImageResource(R.drawable.ic_equine);
+                        tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_equine.setImageResource(R.drawable.ic_equine);
 
-                    tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_birds.setImageResource(R.drawable.ic_birds);
+                        tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_birds.setImageResource(R.drawable.ic_birds);
 
-                    tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_other.setImageResource(R.drawable.ic_others);
+                        tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_other.setImageResource(R.drawable.ic_others);
 
-                    break;
+                        break;
 
                     //}
                     case 2:
-                    //if (position == 2){
-                    tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
+                        //if (position == 2){
+                        tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
 
-                    tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_pets.setImageResource(R.drawable.ic_pets);
+                        tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_pets.setImageResource(R.drawable.ic_pets);
 
-                    tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
-                    tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
-                    tab_iv_equine.setImageResource(R.drawable.ic_equineblue);
+                        tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
+                        tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
+                        tab_iv_equine.setImageResource(R.drawable.ic_equineblue);
 
-                    tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_birds.setImageResource(R.drawable.ic_birds);
+                        tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_birds.setImageResource(R.drawable.ic_birds);
 
-                    tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_other.setImageResource(R.drawable.ic_others);
+                        tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_other.setImageResource(R.drawable.ic_others);
 
-                    break;
-                //}
+                        break;
+                    //}
 
                     case 3:
-                    //if (position == 3){
-                    tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
+                        //if (position == 3){
+                        tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
 
-                    tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_pets.setImageResource(R.drawable.ic_pets);
+                        tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_pets.setImageResource(R.drawable.ic_pets);
 
-                    tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_equine.setImageResource(R.drawable.ic_equine);
+                        tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_equine.setImageResource(R.drawable.ic_equine);
 
-                    tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
-                    tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
-                    tab_iv_birds.setImageResource(R.drawable.ic_birdsblue);
+                        tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
+                        tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
+                        tab_iv_birds.setImageResource(R.drawable.ic_birdsblue);
 
-                    tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_other.setImageResource(R.drawable.ic_others);
+                        tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_other.setImageResource(R.drawable.ic_others);
 
-                    break;
+                        break;
                     //}
 
                     case 4:
-                    //if (position == 4){
-                    tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
+                        //if (position == 4){
+                        tab_rl_diary.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_dairy.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_dairy.setImageResource(R.drawable.ic_dairy);
 
-                    tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_pets.setImageResource(R.drawable.ic_pets);
+                        tab_rl_pets.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_pets.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_pets.setImageResource(R.drawable.ic_pets);
 
-                    tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_equine.setImageResource(R.drawable.ic_equine);
+                        tab_rl_equine.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_equine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_equine.setImageResource(R.drawable.ic_equine);
 
-                    tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
-                    tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
-                    tab_iv_birds.setImageResource(R.drawable.ic_birds);
+                        tab_rl_birds.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tabs_button_style));
+                        tab_tv_birds.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
+                        tab_iv_birds.setImageResource(R.drawable.ic_birds);
 
-                    tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
-                    tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
-                    tab_iv_other.setImageResource(R.drawable.ic_othersblue);
+                        tab_rl_other.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.tab_button_style_after_click));
+                        tab_tv_other.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorBlack));
+                        tab_iv_other.setImageResource(R.drawable.ic_othersblue);
 
-                    break;
+                        break;
                     //}
-            }
+                }
             }
 
             @Override
@@ -469,7 +465,7 @@ public class DashboardClient extends DrawerActivityForClient {
         });
     }
 
-    private void showDialogue(){
+    private void showDialogue() {
 
         final Dialog dialog = new Dialog(DashboardClient.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -503,7 +499,7 @@ public class DashboardClient extends DrawerActivityForClient {
     public void onBackPressed() {
         super.onBackPressed();
 
-        if (backPressCount == 0){
+        if (backPressCount == 0) {
             backPressCount++;
         } else {
             finish();
