@@ -546,7 +546,6 @@ public class SaleAnimals extends AppCompatActivity {
         return result;
     }
 
-
     private String getRealPathFromURI(Uri contentURI)
     {
         String result;

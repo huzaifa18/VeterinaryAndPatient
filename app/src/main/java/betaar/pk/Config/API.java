@@ -111,7 +111,14 @@ public class API {
 
     public static void showLogoutDialogue(final Context context){
 
-        final Dialog dialog = new Dialog(context);
+        Prefs.clearPrefData(context);
+        Intent i = new Intent(context, UserLoginActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        context.startActivity(i);
+        context.stopService(new Intent(context, UpdateLatLong.class));
+
+        /*final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_layout_client_verfication);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
@@ -139,8 +146,7 @@ public class API {
                 context.stopService(new Intent(context, UpdateLatLong.class));
                 //DrawerActivityForVeterinarian.fa.finish();
             }
-        });
-
+        });*/
 
     }
 

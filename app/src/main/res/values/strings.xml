@@ -519,5 +519,8 @@ In brief. You will feel the difference as soon as you walk into our offices, spe
     <string name="pet">Pets</string>
     <string name="dairy">Dairy</string>
     <string name="wildlife">Wild Life</string>
+    <string name="check_up_requests">Checkup Request</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="findjob">Find Jobs</string>
 
 </resources>

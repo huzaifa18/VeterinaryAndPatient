@@ -1,23 +1,14 @@
 package betaar.pk;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
-import android.provider.ContactsContract;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toolbar;
-
-import org.w3c.dom.Text;
 
 import betaar.pk.Preferences.Prefs;
 
@@ -34,15 +25,11 @@ public class DashboardVeterinarian extends DrawerActivityForVeterinarian {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_dashboard_veterinarian);
 
-
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
         //inflate your activity layout here!
-        View contentView = inflater.inflate(R.layout.custome_layout_for_vet_dashboard, null, false);
+        View contentView = inflater.inflate(R.layout.custome_layout_for_vet_dashboard,null,false);
         mDrawerLayout.addView(contentView, 0);
         toolbar.setTitle(R.string.app_name);
-
-
-
 
         init();
         onClickLitenerForCheckupRequests();
@@ -60,6 +47,7 @@ public class DashboardVeterinarian extends DrawerActivityForVeterinarian {
         rl_find_jobs = (RelativeLayout) findViewById(R.id.rl_find_jobs);
         /*rl_offer_jobs = (RelativeLayout) findViewById(R.id.rl_offer_jobs);
         rl_sale_products = (RelativeLayout) findViewById(R.id.rl_sale_products);*/
+
     }
 
     private void onClickLitenerForCheckupRequests(){

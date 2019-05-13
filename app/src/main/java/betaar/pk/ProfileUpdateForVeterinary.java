@@ -188,7 +188,6 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         ll_inflate_document_for_mphil_document = (LinearLayout) findViewById(R.id.ll_inflate_document_for_mphil_document);
         ll_inflate_document_for_experience = (LinearLayout) findViewById(R.id.ll_inflate_document_for_experience);
 
-
         SpinnerListingAdapter subCategory = new SpinnerListingAdapter(getApplicationContext(), Arrays.qualification_type);
         sp_select_qualification.setAdapter(subCategory);
 
@@ -198,11 +197,9 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         sp_select_qualification.setAdapter(adapter);*/
 
-
         ll_inflate_document_for_first.removeAllViews();
         ll_inflate_document_for_mphil_document.removeAllViews();
         ll_inflate_document_for_experience.removeAllViews();
-
 
         ll_to_inflat.removeAllViews();
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -217,12 +214,10 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
         ll_inflate_document_for_experienceInner.removeAllViews();
 
-
         int indecator = ll_to_inflat.getChildCount();
         indecator = indecator + 2;
         Log.e("TAG", "the count of view in experience: " + indecator);
         btDynamicButtonForExperienceDocuments(bt_document_copies_for_experience, indecator);
-
 
         et_top_year_of_passing = (EditText) findViewById(R.id.et_top_year_of_passing);
         et_top_instituation_name = (EditText)findViewById(R.id.et_top_instituation_name);
@@ -343,6 +338,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                     if (cb_surgeon.isChecked()){
                         cb_surgeon.setChecked(false);
                     }
+
                 }
             }
 
@@ -359,20 +355,20 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                final View rowView = inflater.inflate(R.layout.layout_add_more_for_veterinary_update_profile,null);
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            final View rowView = inflater.inflate(R.layout.layout_add_more_for_veterinary_update_profile,null);
 
-                LinearLayout ll_inflate_document_for_experienceInner = (LinearLayout) rowView.findViewById(R.id.ll_inflate_document_for_experience);
-                ll_to_inflat.addView(rowView, ll_to_inflat.getChildCount());
-                Button bt_document_copies_for_experience = (Button) rowView.findViewById(R.id.bt_document_copies_for_experience);
+            LinearLayout ll_inflate_document_for_experienceInner = (LinearLayout) rowView.findViewById(R.id.ll_inflate_document_for_experience);
+            ll_to_inflat.addView(rowView, ll_to_inflat.getChildCount());
+            Button bt_document_copies_for_experience = (Button) rowView.findViewById(R.id.bt_document_copies_for_experience);
 
-                ll_inflate_document_for_experienceInner.removeAllViews();
-                deleteingView(rowView);
+            ll_inflate_document_for_experienceInner.removeAllViews();
+            deleteingView(rowView);
 
-                int indecator = ll_to_inflat.getChildCount();
-                indecator = indecator + 2;
-                Log.e("TAG", "the count of view in experience: " + indecator);
-                btDynamicButtonForExperienceDocuments(bt_document_copies_for_experience, indecator);
+            int indecator = ll_to_inflat.getChildCount();
+            indecator = indecator + 2;
+            Log.e("TAG", "the count of view in experience: " + indecator);
+            btDynamicButtonForExperienceDocuments(bt_document_copies_for_experience, indecator);
 
 
             }
@@ -399,7 +395,6 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
     }
 
-
     private void checkCnageListnerForDairy(){
 
         cb_dairy.setOnClickListener(new View.OnClickListener() {
@@ -423,6 +418,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                         @Override
                         public void onAnimationEnd(Animation animation) {
                             ll_inner_cb_dairy.setVisibility(View.GONE);
+
                         }
 
                         @Override

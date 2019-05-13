@@ -340,11 +340,11 @@ public class MapsActivityForFindingVet extends FragmentActivity implements OnMap
 
                 } else {
 
-                    Log.e("TAG", "newState: " + layoutManager.findFirstVisibleItemPosition());
+                    Log.e("TAG", "newState: " + layoutManager.findFirstCompletelyVisibleItemPosition());
                     Log.e("TAG", "LatLong: " + docsList.get(layoutManager.findFirstVisibleItemPosition()).getLatLong());
 
                     CameraPosition cameraPosition = new CameraPosition.Builder()
-                            .target(docsList.get(layoutManager.findFirstVisibleItemPosition()).getLatLong()).zoom(12.f).build();
+                            .target(docsList.get(layoutManager.findFirstCompletelyVisibleItemPosition()).getLatLong()).zoom(12.f).build();
 
                     mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
