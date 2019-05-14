@@ -2,6 +2,7 @@ package betaar.pk;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.design.widget.NavigationView;
@@ -11,13 +12,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.Locale;
+
+import betaar.pk.Adapters.SpinnerListingAdapter;
 import betaar.pk.Config.API;
 import betaar.pk.Preferences.Prefs;
 import betaar.pk.Services.UpdateLatLong;
@@ -44,6 +51,10 @@ public class DrawerActvityForOrganization extends AppCompatActivity {
     View view;
     Toolbar toolbar;
 
+    Spinner languageSpinner;
+
+    boolean bool = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +76,52 @@ public class DrawerActvityForOrganization extends AppCompatActivity {
         navUsername.setTitle(Prefs.getUserFullNameFromPref(getApplicationContext()).toString());
         navPaymentMethods = menu.findItem(R.id.nav_item_help);
 
+        languageSpinner = (Spinner) mDrawerLayout.findViewById(R.id.sp_language);
+
+        SpinnerListingAdapter subCategory = new SpinnerListingAdapter(getApplicationContext(), Arrays.languages);
+        languageSpinner.setAdapter(subCategory);
+
+        languageSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(getApplicationContext(), DashBoardOrganization.class);
+
+                if (position == 1) {
+
+                    Log.e("Lang", "English");
+                    Locale locale = new Locale("en");
+                    Locale.setDefault(locale);
+                    Configuration config = new Configuration();
+                    config.locale = locale;
+                    getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                    bool = false;
+                    intent.putExtra("lang", bool);
+                    finish();
+                    startActivity(intent);
+
+                } else if (position == 2) {
+
+                    Log.e("Lang", "Urdu");
+                    Locale locale = new Locale("ur");
+                    Locale.setDefault(locale);
+                    Configuration config = new Configuration();
+                    config.locale = locale;
+                    getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                    bool = true;
+                    intent.putExtra("lang", bool);
+                    finish();
+                    startActivity(intent);
+
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

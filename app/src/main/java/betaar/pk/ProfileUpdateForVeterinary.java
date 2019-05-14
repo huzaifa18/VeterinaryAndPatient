@@ -103,11 +103,11 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
     ArrayList<String> topDocumentsArray;
     ArrayList<String> mPhileDocuments;
 
-    CheckBox cb_dairy_cow, cb_dairy_buffalo, cb_dairy_sheep, cb_dairy_goat,cb_dairy_camel;
+    CheckBox cb_dairy_cow, cb_dairy_buffalo, cb_dairy_sheep, cb_dairy_goat, cb_dairy_camel;
     CheckBox cb_pet_dog, cb_pet_cat, cb_pet_rabbit;
     CheckBox cb_equine_horse, cb_equine_donkey, cb_equine_mule;
     CheckBox cb_bird_ostrich, cb_bird_fancy, cb_bird_game, cb_bird_poultry;
-    CheckBox cb_other_fish, cb_other_lion, cb_other_deer, cb_other_monkey ,cb_other_other;
+    CheckBox cb_other_fish, cb_other_lion, cb_other_deer, cb_other_monkey, cb_other_other;
 
     ArrayList<TempDataClass> experineceViewList;
     ArrayList<JSONObject> data;
@@ -144,7 +144,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         updateButtonClickHandler();
     }
 
-    private void init(){
+    private void init() {
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         scroll = (ScrollView) findViewById(R.id.scroll);
@@ -203,7 +203,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
         ll_to_inflat.removeAllViews();
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View rowView = inflater.inflate(R.layout.layout_add_more_for_veterinary_update_profile,null);
+        final View rowView = inflater.inflate(R.layout.layout_add_more_for_veterinary_update_profile, null);
 
         LinearLayout ll_inflate_document_for_experienceInner = (LinearLayout) rowView.findViewById(R.id.ll_inflate_document_for_experience);
 
@@ -220,7 +220,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         btDynamicButtonForExperienceDocuments(bt_document_copies_for_experience, indecator);
 
         et_top_year_of_passing = (EditText) findViewById(R.id.et_top_year_of_passing);
-        et_top_instituation_name = (EditText)findViewById(R.id.et_top_instituation_name);
+        et_top_instituation_name = (EditText) findViewById(R.id.et_top_instituation_name);
         et_rvmp_mpil_dvm = (EditText) findViewById(R.id.et_rvmp_mpil_dvm);
         et_deparments_mpil_dvm = (EditText) findViewById(R.id.et_deparments_mpil_dvm);
         et_instituation_name_mpil_dvm = (EditText) findViewById(R.id.et_instituation_name_mpil_dvm);
@@ -264,16 +264,16 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         progress_logo.bringToFront();
         rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
         progress_logo.setAnimation(rotate);
-        
+
     }
 
-    private void spinnerQualificationSelectListener(){
+    private void spinnerQualificationSelectListener() {
 
         sp_select_qualification.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                if (i == 0){
+                if (i == 0) {
 
                     ll_when_dvm.setVisibility(View.GONE);
                     ll_when_lad.setVisibility(View.GONE);
@@ -281,7 +281,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                     ll_main_check.setVisibility(View.GONE);
                     rl_update_profile.setVisibility(View.GONE);
                 }
-                if (i == 1){
+                if (i == 1) {
 
                     ll_when_dvm.setVisibility(View.GONE);
                     ll_when_lad.setVisibility(View.VISIBLE);
@@ -296,22 +296,22 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
 
                     //for specialities check
-                    if (cb_treatment.isChecked()){
+                    if (cb_treatment.isChecked()) {
 
                         cb_treatment.setChecked(false);
                     }
-                    if (cb_breeding.isChecked()){
+                    if (cb_breeding.isChecked()) {
                         cb_breeding.setChecked(true);
                     }
-                    if (cb_nutritionist.isChecked()){
+                    if (cb_nutritionist.isChecked()) {
                         cb_nutritionist.setChecked(false);
                     }
-                    if (cb_surgeon.isChecked()){
+                    if (cb_surgeon.isChecked()) {
                         cb_surgeon.setChecked(false);
                     }
 
                 }
-                if (i == 2){
+                if (i == 2) {
 
                     ll_when_dvm.setVisibility(View.VISIBLE);
                     ll_when_lad.setVisibility(View.VISIBLE);
@@ -325,17 +325,17 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                     rl_update_profile.setVisibility(View.VISIBLE);
                     et_rvmp_mpil_dvm.setVisibility(View.VISIBLE);
 
-                    if (cb_treatment.isChecked()){
+                    if (cb_treatment.isChecked()) {
 
                         cb_treatment.setChecked(false);
                     }
-                    if (cb_breeding.isChecked()){
+                    if (cb_breeding.isChecked()) {
                         cb_breeding.setChecked(false);
                     }
-                    if (cb_nutritionist.isChecked()){
+                    if (cb_nutritionist.isChecked()) {
                         cb_nutritionist.setChecked(false);
                     }
-                    if (cb_surgeon.isChecked()){
+                    if (cb_surgeon.isChecked()) {
                         cb_surgeon.setChecked(false);
                     }
 
@@ -349,36 +349,36 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void addMoreClickHandler(){
+    private void addMoreClickHandler() {
 
         fb_admore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            final View rowView = inflater.inflate(R.layout.layout_add_more_for_veterinary_update_profile,null);
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                final View rowView = inflater.inflate(R.layout.layout_add_more_for_veterinary_update_profile, null);
 
-            LinearLayout ll_inflate_document_for_experienceInner = (LinearLayout) rowView.findViewById(R.id.ll_inflate_document_for_experience);
-            ll_to_inflat.addView(rowView, ll_to_inflat.getChildCount());
-            Button bt_document_copies_for_experience = (Button) rowView.findViewById(R.id.bt_document_copies_for_experience);
+                LinearLayout ll_inflate_document_for_experienceInner = (LinearLayout) rowView.findViewById(R.id.ll_inflate_document_for_experience);
+                ll_to_inflat.addView(rowView, ll_to_inflat.getChildCount());
+                Button bt_document_copies_for_experience = (Button) rowView.findViewById(R.id.bt_document_copies_for_experience);
 
-            ll_inflate_document_for_experienceInner.removeAllViews();
-            deleteingView(rowView);
+                ll_inflate_document_for_experienceInner.removeAllViews();
+                deleteingView(rowView);
 
-            int indecator = ll_to_inflat.getChildCount();
-            indecator = indecator + 2;
-            Log.e("TAG", "the count of view in experience: " + indecator);
-            btDynamicButtonForExperienceDocuments(bt_document_copies_for_experience, indecator);
+                int indecator = ll_to_inflat.getChildCount();
+                indecator = indecator + 2;
+                Log.e("TAG", "the count of view in experience: " + indecator);
+                btDynamicButtonForExperienceDocuments(bt_document_copies_for_experience, indecator);
 
 
             }
         });
     }
 
-    private void deleteingView(final View myView){
+    private void deleteingView(final View myView) {
 
         Log.e("TAG", "Image button Clicked: " + ll_to_inflat.getChildCount());
-        for (int i = 0; i<ll_to_inflat.getChildCount(); i++){
+        for (int i = 0; i < ll_to_inflat.getChildCount(); i++) {
             final View timingView = ll_to_inflat.getChildAt(i);
             ImageView im_remove_view = (ImageView) timingView.findViewById(R.id.im_remove_view);
 
@@ -395,17 +395,17 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
     }
 
-    private void checkCnageListnerForDairy(){
+    private void checkCnageListnerForDairy() {
 
         cb_dairy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cb_dairy.isChecked()){
+                if (cb_dairy.isChecked()) {
                     ll_inner_cb_dairy.setVisibility(View.VISIBLE);
                     Animation slidToRight = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_right);
                     ll_inner_cb_dairy.startAnimation(slidToRight);
 
-                }else {
+                } else {
 
                     Animation slidToLeft = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_left);
                     ll_inner_cb_dairy.startAnimation(slidToLeft);
@@ -433,17 +433,17 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
     }
 
 
-    private void checkCnageListnerForPets(){
+    private void checkCnageListnerForPets() {
 
         cb_pet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cb_pet.isChecked()){
+                if (cb_pet.isChecked()) {
                     ll_inner_cb_pet.setVisibility(View.VISIBLE);
                     Animation slidToRight = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_right);
                     ll_inner_cb_pet.startAnimation(slidToRight);
 
-                }else {
+                } else {
 
                     Animation slidToLeft = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_left);
                     ll_inner_cb_pet.startAnimation(slidToLeft);
@@ -469,17 +469,17 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void checkCnageListnerForEquine(){
+    private void checkCnageListnerForEquine() {
 
         cb_equine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cb_equine.isChecked()){
+                if (cb_equine.isChecked()) {
                     ll_inner_cb_equine.setVisibility(View.VISIBLE);
                     Animation slidToRight = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_right);
                     ll_inner_cb_equine.startAnimation(slidToRight);
 
-                }else {
+                } else {
 
                     Animation slidToLeft = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_left);
                     ll_inner_cb_equine.startAnimation(slidToLeft);
@@ -505,17 +505,17 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void checkCnageListnerForBirds(){
+    private void checkCnageListnerForBirds() {
 
         cb_bird.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cb_bird.isChecked()){
+                if (cb_bird.isChecked()) {
                     ll_inner_cb_bird.setVisibility(View.VISIBLE);
                     Animation slidToRight = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_right);
                     ll_inner_cb_bird.startAnimation(slidToRight);
 
-                }else {
+                } else {
 
                     Animation slidToLeft = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_left);
                     ll_inner_cb_bird.startAnimation(slidToLeft);
@@ -541,17 +541,17 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void checkCnageListnerForOther(){
+    private void checkCnageListnerForOther() {
 
         cb_other.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cb_other.isChecked()){
+                if (cb_other.isChecked()) {
                     ll_inner_cb_other.setVisibility(View.VISIBLE);
                     Animation slidToRight = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_right);
                     ll_inner_cb_other.startAnimation(slidToRight);
 
-                }else {
+                } else {
 
                     Animation slidToLeft = AnimationUtils.loadAnimation(ProfileUpdateForVeterinary.this, R.anim.slide_to_left);
                     ll_inner_cb_other.startAnimation(slidToLeft);
@@ -577,21 +577,21 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void gettingDocumentsFromGallary(){
+    private void gettingDocumentsFromGallary() {
 
         bt_document_copies_common_study.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 boolean result = Utility.checkPermission(ProfileUpdateForVeterinary.this);
-                if (result){
+                if (result) {
 
 
-                    final  Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
+                    final Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.custome_dialog_for_getting_photo);
 
-                    Button bt_dialog_from_gallary = (Button)dialog.findViewById(R.id.bt_dialog_from_gallary);
+                    Button bt_dialog_from_gallary = (Button) dialog.findViewById(R.id.bt_dialog_from_gallary);
                     Button bt_dialog_from_camera = (Button) dialog.findViewById(R.id.bt_dialog_from_camera);
 
                     bt_dialog_from_camera.setOnClickListener(new View.OnClickListener() {
@@ -625,8 +625,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void cameraIntent(final int detector)
-    {
+    private void cameraIntent(final int detector) {
         ContentValues values = new ContentValues();
         values.put(MediaStore.Images.Media.TITLE, "New Picture");
         values.put(MediaStore.Images.Media.DESCRIPTION, "From your Camera");
@@ -639,7 +638,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
             addViewFileNameForMphile(fileName, imageUri.toString());
 
         }
-        if (detector > 2){
+        if (detector > 2) {
             addFileNameForDynamicViewsForExperience(fileName, imageUri.toString(), detector);
 
         }
@@ -650,12 +649,11 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_CAMERA);
     }
 
-    private void galleryIntent()
-    {
+    private void galleryIntent() {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_PICK);//
-        startActivityForResult(Intent.createChooser(intent, "Select File"),SELECT_FILE);
+        startActivityForResult(Intent.createChooser(intent, "Select File"), SELECT_FILE);
     }
 
     @Override
@@ -667,12 +665,11 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         //  if (resultCode == Activity.RESULT_OK) {
         if (requestCode == SELECT_FILE) {
 
-            if (data!=null) {
+            if (data != null) {
                 onSelectFromGalleryResult(data);
             }
-        }
-        else if (requestCode == REQUEST_CAMERA) {
-            if (data!=null) {
+        } else if (requestCode == REQUEST_CAMERA) {
+            if (data != null) {
                 onCaptureImageResult(data);
             }
         }
@@ -683,17 +680,17 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
     private void onSelectFromGalleryResult(Intent data) {
 
 
-        if (data!=null) {
+        if (data != null) {
             imageUri = data.getData();
             String fileName = getFileName(imageUri);
             if (indicatorForGallary == 1) {
                 addViewFileName(fileName, imageUri.toString());
             }
-            if (indicatorForGallary == 2){
+            if (indicatorForGallary == 2) {
 
                 addViewFileNameForMphile(fileName, imageUri.toString());
             }
-            if (indicatorForGallary>2){
+            if (indicatorForGallary > 2) {
                 addFileNameForDynamicViewsForExperience(fileName, imageUri.toString(), indicatorForGallary);
             }
             Log.e("TAG", "the upload file name is: " + fileName);
@@ -748,8 +745,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         return result;
     }
 
-    private void addViewFileName(String fileName, String imageURi){
-
+    private void addViewFileName(String fileName, String imageURi) {
 
 
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -769,9 +765,9 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         btPreviewImage(rowView);
     }
 
-    private void deletingImageFileName(final View myView){
+    private void deletingImageFileName(final View myView) {
 
-        for (int i = 0; i<ll_inflate_document_for_first.getChildCount(); i++){
+        for (int i = 0; i < ll_inflate_document_for_first.getChildCount(); i++) {
             final View rootView = ll_inflate_document_for_first.getChildAt(i);
             ImageView im_remove_view = (ImageView) rootView.findViewById(R.id.iv_crose_file_name);
 
@@ -787,9 +783,9 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         }
     }
 
-    private void btPreviewImage(final View previewView){
+    private void btPreviewImage(final View previewView) {
 
-        for (int i = 0; i<ll_inflate_document_for_first.getChildCount(); i++){
+        for (int i = 0; i < ll_inflate_document_for_first.getChildCount(); i++) {
             final View rootView = ll_inflate_document_for_first.getChildAt(i);
             Button d_view_button_preview = (Button) rootView.findViewById(R.id.d_view_button_preview);
 
@@ -797,12 +793,12 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    TextView tv_image_uri = (TextView) rootView.findViewById(R.id.tv_image_uri) ;
+                    TextView tv_image_uri = (TextView) rootView.findViewById(R.id.tv_image_uri);
                     TextView tv_file_name = (TextView) rootView.findViewById(R.id.tv_file_name);
                     Log.e("TAg", "the image page is: " + tv_image_uri.getText().toString());
 
 
-                    final  Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
+                    final Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.custome_image_preview);
 
@@ -824,20 +820,20 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
     }
 
-    private void btDocumentsForMphil(){
+    private void btDocumentsForMphil() {
         bt_document_copi_dvm_mphile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
                 boolean result = Utility.checkPermission(ProfileUpdateForVeterinary.this);
-                if (result){
+                if (result) {
 
-                    final  Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
+                    final Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.custome_dialog_for_getting_photo);
 
-                    Button bt_dialog_from_gallary = (Button)dialog.findViewById(R.id.bt_dialog_from_gallary);
+                    Button bt_dialog_from_gallary = (Button) dialog.findViewById(R.id.bt_dialog_from_gallary);
                     Button bt_dialog_from_camera = (Button) dialog.findViewById(R.id.bt_dialog_from_camera);
 
                     bt_dialog_from_camera.setOnClickListener(new View.OnClickListener() {
@@ -871,8 +867,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void addViewFileNameForMphile(String fileName, String imageURi){
-
+    private void addViewFileNameForMphile(String fileName, String imageURi) {
 
 
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -890,9 +885,9 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         btPreviewImageMphile(rowView);
     }
 
-    private void deletingImageFileNameForMphil(final View myView){
+    private void deletingImageFileNameForMphil(final View myView) {
 
-        for (int i = 0; i<ll_inflate_document_for_mphil_document.getChildCount(); i++){
+        for (int i = 0; i < ll_inflate_document_for_mphil_document.getChildCount(); i++) {
             final View rootView = ll_inflate_document_for_mphil_document.getChildAt(i);
             ImageView im_remove_view = (ImageView) rootView.findViewById(R.id.iv_crose_file_name_mphil);
 
@@ -909,9 +904,9 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
     }
 
 
-    private void btPreviewImageMphile(final View previewView){
+    private void btPreviewImageMphile(final View previewView) {
 
-        for (int i = 0; i<ll_inflate_document_for_mphil_document.getChildCount(); i++){
+        for (int i = 0; i < ll_inflate_document_for_mphil_document.getChildCount(); i++) {
             final View rootView = ll_inflate_document_for_mphil_document.getChildAt(i);
             Button d_view_button_preview_mphil = (Button) rootView.findViewById(R.id.d_view_button_preview_mphil);
 
@@ -919,12 +914,12 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    TextView tv_image_uri_mphil = (TextView) rootView.findViewById(R.id.tv_image_uri_mphil) ;
+                    TextView tv_image_uri_mphil = (TextView) rootView.findViewById(R.id.tv_image_uri_mphil);
                     TextView tv_file_name_mphil = (TextView) rootView.findViewById(R.id.tv_file_name_mphil);
                     Log.e("TAg", "the image page is: " + tv_image_uri_mphil.getText().toString());
 
 
-                    final  Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
+                    final Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.custome_image_preview);
 
@@ -945,20 +940,20 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         }
     }
 
-    private void btDynamicButtonForExperienceDocuments(Button btExpereiceDocuments, final int detector){
+    private void btDynamicButtonForExperienceDocuments(Button btExpereiceDocuments, final int detector) {
         btExpereiceDocuments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
                 boolean result = Utility.checkPermission(ProfileUpdateForVeterinary.this);
-                if (result){
+                if (result) {
 
-                    final  Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
+                    final Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.custome_dialog_for_getting_photo);
 
-                    Button bt_dialog_from_gallary = (Button)dialog.findViewById(R.id.bt_dialog_from_gallary);
+                    Button bt_dialog_from_gallary = (Button) dialog.findViewById(R.id.bt_dialog_from_gallary);
                     Button bt_dialog_from_camera = (Button) dialog.findViewById(R.id.bt_dialog_from_camera);
 
                     bt_dialog_from_camera.setOnClickListener(new View.OnClickListener() {
@@ -992,36 +987,36 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         });
     }
 
-    private void addFileNameForDynamicViewsForExperience(String fileName, String imageURi, int viewNumber){
+    private void addFileNameForDynamicViewsForExperience(String fileName, String imageURi, int viewNumber) {
 
 
-        viewNumber = viewNumber-3;
+        viewNumber = viewNumber - 3;
 
         final View parentViwe = ll_to_inflat.getChildAt(viewNumber);
         Log.e("TAg", "view positino is: " + parentViwe);
 
         LinearLayout ll_inflate_document_for_experience_inner = (LinearLayout) parentViwe.findViewById(R.id.ll_inflate_document_for_experience);
-            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            final View rowView = inflater.inflate(R.layout.layout_for_add_file_name_experience
-                    , null);
-            TextView tv_image_uri_experience = (TextView) rowView.findViewById(R.id.tv_image_uri_experience);
-            tv_image_uri_experience.setText(imageURi);
-            TextView tv_file_name_experience = (TextView) rowView.findViewById(R.id.tv_file_name_experience);
-            tv_file_name_experience.setText(fileName);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final View rowView = inflater.inflate(R.layout.layout_for_add_file_name_experience
+                , null);
+        TextView tv_image_uri_experience = (TextView) rowView.findViewById(R.id.tv_image_uri_experience);
+        tv_image_uri_experience.setText(imageURi);
+        TextView tv_file_name_experience = (TextView) rowView.findViewById(R.id.tv_file_name_experience);
+        tv_file_name_experience.setText(fileName);
 
 
         ll_inflate_document_for_experience_inner.addView(rowView);
 
-            deletingImageFileNameForExperience(rowView);
-            btPreviewImageExperience(rowView);
+        deletingImageFileNameForExperience(rowView);
+        btPreviewImageExperience(rowView);
 
     }
 
-    private void deletingImageFileNameForExperience(final View myView){
+    private void deletingImageFileNameForExperience(final View myView) {
 
         LinearLayout ll_inflate_document_for_experience_inner = (LinearLayout) myView.findViewById(R.id.ll_inflate_document_for_experience);
 
-        for (int i = 0; i<ll_inflate_document_for_experience_inner.getChildCount(); i++){
+        for (int i = 0; i < ll_inflate_document_for_experience_inner.getChildCount(); i++) {
             final View rootView = ll_inflate_document_for_experience_inner.getChildAt(i);
             ImageView im_remove_view = (ImageView) rootView.findViewById(R.id.iv_crose_file_name_experience);
 
@@ -1037,11 +1032,11 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
     }
 
 
-    private void btPreviewImageExperience(final View previewView){
+    private void btPreviewImageExperience(final View previewView) {
 
         LinearLayout ll_inflate_document_for_experience_inner = (LinearLayout) previewView.findViewById(R.id.ll_inflate_document_for_experience);
 
-        for (int i = 0; i<ll_inflate_document_for_experience_inner.getChildCount(); i++){
+        for (int i = 0; i < ll_inflate_document_for_experience_inner.getChildCount(); i++) {
             final View rootView = ll_inflate_document_for_experience_inner.getChildAt(i);
             Button d_view_button_preview_mphil = (Button) rootView.findViewById(R.id.d_view_button_preview_experience);
 
@@ -1049,12 +1044,12 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    TextView tv_image_uri_mphil = (TextView) rootView.findViewById(R.id.tv_image_uri_experience) ;
+                    TextView tv_image_uri_mphil = (TextView) rootView.findViewById(R.id.tv_image_uri_experience);
                     TextView tv_file_name_mphil = (TextView) rootView.findViewById(R.id.tv_file_name_experience);
                     Log.e("TAg", "the image page is: " + tv_image_uri_mphil.getText().toString());
 
 
-                    final  Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
+                    final Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.setContentView(R.layout.custome_image_preview);
 
@@ -1075,606 +1070,619 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         }
     }
 
-    private void updateButtonClickHandler(){
+    private void updateButtonClickHandler() {
         rl_update_profile.setOnClickListener(new View.OnClickListener() {
-                @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-                @Override
-                public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
 
-                    Log.e("TAG","OKAY!");
+                Log.e("TAG", "Button Click!");
 
-        final Animation animShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
+                final Animation animShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
 
-                    if (experineceViewList.size()>0){
-                        experineceViewList.clear();
-                    }
+                if (experineceViewList.size() > 0) {
+                    experineceViewList.clear();
+                }
 
-                    int theExperienceViewCount = ll_to_inflat.getChildCount();
-                    EditText et_experience_from = null;
-                    EditText et_experience_to = null;
-                    EditText et_organization_name = null;
-                     //Log.e("TAg", "the experience View count are: " + theExperienceViewCount);
+                int theExperienceViewCount = ll_to_inflat.getChildCount();
+                EditText et_experience_from = null;
+                EditText et_experience_to = null;
+                EditText et_organization_name = null;
+                Log.e("TAg", "the experience View count are: " + theExperienceViewCount);
 
-                    for (int i = 0; i<theExperienceViewCount; i++){
+                for (int i = 0; i < theExperienceViewCount; i++) {
 
-                        final View parantView = ll_to_inflat.getChildAt(i);
-                        et_experience_from = (EditText) parantView.findViewById(R.id.et_experience_from);
-                        et_experience_to = (EditText) parantView.findViewById(R.id.et_experience_to);
-                        et_organization_name = (EditText) parantView.findViewById(R.id.et_organization_name);
+                    final View parantView = ll_to_inflat.getChildAt(i);
+                    et_experience_from = (EditText) parantView.findViewById(R.id.et_experience_from);
+                    et_experience_to = (EditText) parantView.findViewById(R.id.et_experience_to);
+                    et_organization_name = (EditText) parantView.findViewById(R.id.et_organization_name);
 
-                        String expFrom = et_experience_from.getText().toString();
-                        String expTo = et_experience_to.getText().toString();
-                        String expORG_Name = et_organization_name.getText().toString();
+                    String expFrom = et_experience_from.getText().toString();
+                    String expTo = et_experience_to.getText().toString();
+                    String expORG_Name = et_organization_name.getText().toString();
 
-                        //    Log.e("TAg", "the experience from is: " + expFrom);
-                        //    Log.e("TAg", "the experience expTo is: " + expTo);
-                        //   Log.e("TAg", "the experience expORG_Name is: " + expORG_Name);
+                        Log.e("TAg", "the experience from is: " + expFrom);
+                        Log.e("TAg", "the experience expTo is: " + expTo);
+                       Log.e("TAg", "the experience expORG_Name is: " + expORG_Name);
 
-                        String et_exprience_from_is_not_nice = et_experience_from.getText().toString();
+                    String et_exprience_from_is_not_nice = et_experience_from.getText().toString();
 
-                        ArrayList<String> urisForImages = new ArrayList<>();
+                    ArrayList<String> urisForImages = new ArrayList<>();
 
-                        LinearLayout ll_inflate_document_for_experience = (LinearLayout) parantView.findViewById(R.id.ll_inflate_document_for_experience);
+                    LinearLayout ll_inflate_document_for_experience = (LinearLayout) parantView.findViewById(R.id.ll_inflate_document_for_experience);
 
-                        int chiledCountForExperience = ll_inflate_document_for_experience.getChildCount();
-                        //    Log.e("TAg", "the child count for top documents are: " + chiledCountForExperience);
+                    int chiledCountForExperience = ll_inflate_document_for_experience.getChildCount();
+                        Log.e("TAg", "the child count for top documents are: " + chiledCountForExperience);
 
-                        if (chiledCountForExperience>0){
+                    if (chiledCountForExperience > 0) {
 
-                            for (int j = 0; j<chiledCountForExperience;j++){
+                        for (int j = 0; j < chiledCountForExperience; j++) {
 
-                                final View mViews = ll_inflate_document_for_experience.getChildAt(j);
-                                TextView tv_image_uri_experience = (TextView) mViews.findViewById(R.id.tv_image_uri_experience);
-                                //         Log.e("TAg", "the image uri is: " + tv_image_uri_experience.getText().toString());
-                                urisForImages.add(tv_image_uri_experience.getText().toString());
+                            final View mViews = ll_inflate_document_for_experience.getChildAt(j);
+                            TextView tv_image_uri_experience = (TextView) mViews.findViewById(R.id.tv_image_uri_experience);
+                            //         Log.e("TAg", "the image uri is: " + tv_image_uri_experience.getText().toString());
+                            urisForImages.add(tv_image_uri_experience.getText().toString());
 
-                            }
-                        }//end of for loop for experience documents
+                        }
+                    }//end of for loop for experience documents
 
-                        experineceViewList.add(new TempDataClass(expTo, expFrom, expORG_Name, urisForImages));
+                    experineceViewList.add(new TempDataClass(expTo, expFrom, expORG_Name, urisForImages));
 
-                    }//end of experience dynamic views
+                }//end of experience dynamic views
 
-        ArrayList<HashMap<String, String>> precticeDataRecord = new ArrayList<>();
+                ArrayList<HashMap<String, String>> precticeDataRecord = new ArrayList<>();
 
-        String topPassingYeaer = et_top_year_of_passing.getText().toString();
-        String topInstituation = et_top_instituation_name.getText().toString();
-        String toRVMP_or_SVMP = et_rvmp_mpil_dvm.getText().toString();
+                String topPassingYeaer = et_top_year_of_passing.getText().toString();
+                String topInstituation = et_top_instituation_name.getText().toString();
+                String toRVMP_or_SVMP = et_rvmp_mpil_dvm.getText().toString();
 
-        String mPhileDemartment = et_deparments_mpil_dvm.getText().toString();
-        String mPhilePassingYear = et_passing_year_mpil_dvm.getText().toString();
-        String mPhileInstituation = et_instituation_name_mpil_dvm.getText().toString();
+                String mPhileDemartment = et_deparments_mpil_dvm.getText().toString();
+                String mPhilePassingYear = et_passing_year_mpil_dvm.getText().toString();
+                String mPhileInstituation = et_instituation_name_mpil_dvm.getText().toString();
 
-        if (et_top_year_of_passing.getText().toString().length() == 0) {
+                Log.e("TAG", "OKAY");
 
-            scroll.smoothScrollTo(0, ll_when_lad.getTop());
-            et_top_year_of_passing.setError("Passing Year Must not be Empty!");
-            et_top_year_of_passing.setAnimation(animShake);
+                if (et_top_year_of_passing.getText().toString().length() == 0) {
 
-        } else if (et_top_year_of_passing.getText().toString().length() != 4) {
+                    scroll.smoothScrollTo(0, ll_when_lad.getTop());
+                    et_top_year_of_passing.setError("Passing Year Must not be Empty!");
+                    et_top_year_of_passing.setAnimation(animShake);
 
-            scroll.smoothScrollTo(0, ll_when_lad.getTop());
-            et_top_year_of_passing.setError("At least 4 Characters are to be entered!");
-            et_top_year_of_passing.setAnimation(animShake);
+                } else if (et_top_year_of_passing.getText().toString().length() != 4) {
 
-        } else if (et_top_instituation_name.getText().length() == 0) {
+                    scroll.smoothScrollTo(0, ll_when_lad.getTop());
+                    et_top_year_of_passing.setError("At least 4 Characters are to be entered!");
+                    et_top_year_of_passing.setAnimation(animShake);
 
-            scroll.smoothScrollTo(0, ll_when_lad.getTop());
-            et_top_instituation_name.setError("Institution Name Must not be Empty!");
-            et_top_instituation_name.setAnimation(animShake);
+                } else if (et_top_instituation_name.getText().length() == 0) {
 
-        } else if (sp_select_qualification.getSelectedItemId() == 2 && et_rvmp_mpil_dvm.getText().length() == 0) {
+                    scroll.smoothScrollTo(0, ll_when_lad.getTop());
+                    et_top_instituation_name.setError("Institution Name Must not be Empty!");
+                    et_top_instituation_name.setAnimation(animShake);
 
-            scroll.smoothScrollTo(0, ll_when_lad.getTop());
-            et_rvmp_mpil_dvm.setError("This field must not be empty!");
-            et_rvmp_mpil_dvm.setAnimation(animShake);
+                } else if (sp_select_qualification.getSelectedItemId() == 2 && et_rvmp_mpil_dvm.getText().length() == 0) {
 
-        } else if (!(cb_dairy.isChecked() || cb_pet.isChecked() || cb_equine.isChecked() || cb_bird.isChecked() || cb_other.isChecked())) {
+                    scroll.smoothScrollTo(0, ll_when_lad.getTop());
+                    et_rvmp_mpil_dvm.setError("This field must not be empty!");
+                    et_rvmp_mpil_dvm.setAnimation(animShake);
 
-            scroll.smoothScrollTo(0, tv_expertise.getTop());
-            tv_expertise.setError("Please Select Any Expertise!");
-            Toast.makeText(ProfileUpdateForVeterinary.this,"Please Select Any Expertise!", Toast.LENGTH_SHORT).show();
-            tv_expertise.setAnimation(animShake);
+                } else if (!(cb_dairy.isChecked() || cb_pet.isChecked() || cb_equine.isChecked() || cb_bird.isChecked() || cb_other.isChecked())) {
 
-        } else if (cb_dairy.isChecked() && !(cb_dairy_cow.isChecked() || cb_dairy_buffalo.isChecked() || cb_dairy_sheep.isChecked() || cb_dairy_goat.isChecked() || cb_dairy_camel.isChecked())){
+                    scroll.smoothScrollTo(0, tv_expertise.getTop());
+                    tv_expertise.setError("Please Select Any Expertise!");
+                    Toast.makeText(ProfileUpdateForVeterinary.this, "Please Select Any Expertise!", Toast.LENGTH_SHORT).show();
+                    tv_expertise.setAnimation(animShake);
 
-            scroll.smoothScrollTo(0, cb_dairy.getTop());
-            cb_dairy.setError("Please Select Any Expertise!");
-            Toast.makeText(ProfileUpdateForVeterinary.this,"Please Select Any Dairy Expertise!", Toast.LENGTH_SHORT).show();
-            cb_dairy.setAnimation(animShake);
-
-            tv_expertise.setError(null);
-            cb_pet.setError(null);
-            cb_equine.setError(null);
-            cb_bird.setError(null);
-            cb_other.setError(null);
-            tv_specialization.setError(null);
-
-        } else if (cb_pet.isChecked() && !(cb_pet_dog.isChecked() || cb_pet_cat.isChecked() || cb_pet_rabbit.isChecked())){
-
-            scroll.smoothScrollTo(0, cb_pet.getTop());
-            cb_pet.setError("Please Select Any Expertise!");
-            Toast.makeText(ProfileUpdateForVeterinary.this,"Please Select Any Pet Expertise!", Toast.LENGTH_SHORT).show();
-            cb_pet.setAnimation(animShake);
-
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_equine.setError(null);
-            cb_bird.setError(null);
-            cb_other.setError(null);
-            tv_specialization.setError(null);
-
-        } else if (cb_equine.isChecked() && !(cb_equine_horse.isChecked() || cb_equine_donkey.isChecked() || cb_equine_mule.isChecked())){
-
-            scroll.smoothScrollTo(0, cb_equine.getTop());
-            cb_equine.setError("Please Select Any Expertise!");
-            Toast.makeText(ProfileUpdateForVeterinary.this,"Please Select Any Equine Expertise!", Toast.LENGTH_SHORT).show();
-            cb_equine.setAnimation(animShake);
-
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_pet.setError(null);
-            cb_bird.setError(null);
-            cb_other.setError(null);
-            tv_specialization.setError(null);
-
-        } else if (cb_bird.isChecked() && !(cb_bird_ostrich.isChecked() || cb_bird_poultry.isChecked() || cb_bird_fancy.isChecked() || cb_bird_game.isChecked())){
-
-            scroll.smoothScrollTo(0, cb_bird.getTop());
-            cb_bird.setError("Please Select Any Expertise!");
-            Toast.makeText(ProfileUpdateForVeterinary.this,"Please Select Any Bird Expertise!", Toast.LENGTH_SHORT).show();
-            cb_bird.setAnimation(animShake);
-
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_pet.setError(null);
-            cb_equine.setError(null);
-            cb_other.setError(null);
-            tv_specialization.setError(null);
-
-        } else if (cb_other.isChecked() && !(cb_other_fish.isChecked() || cb_other_lion.isChecked() || cb_other_deer.isChecked() || cb_other_monkey.isChecked() || cb_other_other.isChecked())){
-
-            scroll.smoothScrollTo(0, cb_other.getTop());
-            cb_other.setError("Please Select Any Expertise!");
-            Toast.makeText(ProfileUpdateForVeterinary.this,"Please Select Any Other Category Expertise!", Toast.LENGTH_SHORT).show();
-            cb_other.setAnimation(animShake);
-
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_pet.setError(null);
-            cb_equine.setError(null);
-            cb_bird.setError(null);
-            tv_specialization.setError(null);
-
-        } else if (!(cb_treatment.isChecked() || cb_nutritionist.isChecked() || cb_breeding.isChecked() || cb_surgeon.isChecked())) {
-
-            scroll.smoothScrollTo(0, tv_specialization.getTop());
-            tv_specialization.setError("Please Select Any Specialization!");
-            Toast.makeText(ProfileUpdateForVeterinary.this,"Please Select Any Specialization!", Toast.LENGTH_SHORT).show();
-            tv_specialization.setAnimation(animShake);
-
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_pet.setError(null);
-            cb_equine.setError(null);
-            cb_bird.setError(null);
-            cb_other.setError(null);
-
-        }else if (!(et_deparments_mpil_dvm.getText().toString().length() == 0 && et_passing_year_mpil_dvm.getText().toString().length() == 0 && et_instituation_name_mpil_dvm.getText().toString().length() == 0)) {
-
-            if (et_deparments_mpil_dvm.getText().toString().length() == 0) {
-
-                scroll.smoothScrollTo(0, et_deparments_mpil_dvm.getBottom());
-                et_deparments_mpil_dvm.setError("This field can not be empty!");
-                et_deparments_mpil_dvm.setAnimation(animShake);
-
-            } else if (et_passing_year_mpil_dvm.getText().toString().length() == 0) {
-
-                scroll.smoothScrollTo(0, et_passing_year_mpil_dvm.getBottom());
-                et_passing_year_mpil_dvm.setError("This field can not be empty!");
-                et_passing_year_mpil_dvm.setAnimation(animShake);
-
-            } else if (et_instituation_name_mpil_dvm.getText().toString().length() == 0){
-
-                scroll.smoothScrollTo(0, et_instituation_name_mpil_dvm.getBottom());
-                et_instituation_name_mpil_dvm.setError("This field can not be empty!");
-                et_instituation_name_mpil_dvm.setAnimation(animShake);
-
-            }
-
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_pet.setError(null);
-            cb_equine.setError(null);
-            cb_bird.setError(null);
-            cb_other.setError(null);
-            tv_specialization.setError(null);
-
-        } else if (theExperienceViewCount >= 1 && (et_experience_from.getText().toString().length() == 0 || et_experience_from.getText().toString().length() != 4 || et_experience_to.getText().toString().length() == 0 || et_experience_to.getText().toString().length() != 4 || et_organization_name.getText().toString().length() == 0 || Integer.valueOf(et_experience_from.getText().toString()) > Integer.valueOf(et_experience_to.getText().toString()))){
-
-            for (int i = 0; i<theExperienceViewCount; i++){
-
-                final View parantView = ll_to_inflat.getChildAt(i);
-                et_experience_from = (EditText) parantView.findViewById(R.id.et_experience_from);
-                et_experience_to = (EditText) parantView.findViewById(R.id.et_experience_to);
-                et_organization_name = (EditText) parantView.findViewById(R.id.et_organization_name);
-
-                String expFrom = et_experience_from.getText().toString();
-                String expTo = et_experience_to.getText().toString();
-                String expORG_Name = et_organization_name.getText().toString();
-
-                if (et_experience_from.getText().toString().length() == 0){
-
-                    //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
-                    et_experience_from.setError("This field can not be empty!");
-                    ll_to_inflat.setAnimation(animShake);
-
-                } else if (et_experience_from.getText().toString().length() != 4) {
-
-                    et_experience_from.setError("4 characters required!");
-                    ll_to_inflat.setAnimation(animShake);
-
-                } else if (et_experience_to.getText().toString().length() == 0){
-
-                    //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
-                    et_experience_to.setError("This field can not be empty!");
-                    ll_to_inflat.setAnimation(animShake);
-
-                } else if (et_experience_to.getText().toString().length() != 4){
-
-                    et_experience_to.setError("4 characters required!");
-                    ll_to_inflat.setAnimation(animShake);
-
-                } else if (et_organization_name.getText().toString().length() == 0){
-
-                    //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
-                    et_organization_name.setError("This field can not be empty!");
-                    ll_to_inflat.setAnimation(animShake);
-
-                } else if (Integer.valueOf(et_experience_from.getText().toString()) > Integer.valueOf(et_experience_to.getText().toString())) {
-
-                    //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
-                    et_experience_to.setError("Must be greater than or equal to From!");
-                    ll_to_inflat.setAnimation(animShake);
+                } else if (cb_dairy.isChecked() && !(cb_dairy_cow.isChecked() || cb_dairy_buffalo.isChecked() || cb_dairy_sheep.isChecked() || cb_dairy_goat.isChecked() || cb_dairy_camel.isChecked())) {
+
+                    scroll.smoothScrollTo(0, cb_dairy.getTop());
+                    cb_dairy.setError("Please Select Any Expertise!");
+                    Toast.makeText(ProfileUpdateForVeterinary.this, "Please Select Any Dairy Expertise!", Toast.LENGTH_SHORT).show();
+                    cb_dairy.setAnimation(animShake);
+
+                    tv_expertise.setError(null);
+                    cb_pet.setError(null);
+                    cb_equine.setError(null);
+                    cb_bird.setError(null);
+                    cb_other.setError(null);
+                    tv_specialization.setError(null);
+
+                } else if (cb_pet.isChecked() && !(cb_pet_dog.isChecked() || cb_pet_cat.isChecked() || cb_pet_rabbit.isChecked())) {
+
+                    scroll.smoothScrollTo(0, cb_pet.getTop());
+                    cb_pet.setError("Please Select Any Expertise!");
+                    Toast.makeText(ProfileUpdateForVeterinary.this, "Please Select Any Pet Expertise!", Toast.LENGTH_SHORT).show();
+                    cb_pet.setAnimation(animShake);
+
+                    tv_expertise.setError(null);
+                    cb_dairy.setError(null);
+                    cb_equine.setError(null);
+                    cb_bird.setError(null);
+                    cb_other.setError(null);
+                    tv_specialization.setError(null);
+
+                } else if (cb_equine.isChecked() && !(cb_equine_horse.isChecked() || cb_equine_donkey.isChecked() || cb_equine_mule.isChecked())) {
+
+                    scroll.smoothScrollTo(0, cb_equine.getTop());
+                    cb_equine.setError("Please Select Any Expertise!");
+                    Toast.makeText(ProfileUpdateForVeterinary.this, "Please Select Any Equine Expertise!", Toast.LENGTH_SHORT).show();
+                    cb_equine.setAnimation(animShake);
+
+                    tv_expertise.setError(null);
+                    cb_dairy.setError(null);
+                    cb_pet.setError(null);
+                    cb_bird.setError(null);
+                    cb_other.setError(null);
+                    tv_specialization.setError(null);
+
+                } else if (cb_bird.isChecked() && !(cb_bird_ostrich.isChecked() || cb_bird_poultry.isChecked() || cb_bird_fancy.isChecked() || cb_bird_game.isChecked())) {
+
+                    scroll.smoothScrollTo(0, cb_bird.getTop());
+                    cb_bird.setError("Please Select Any Expertise!");
+                    Toast.makeText(ProfileUpdateForVeterinary.this, "Please Select Any Bird Expertise!", Toast.LENGTH_SHORT).show();
+                    cb_bird.setAnimation(animShake);
+
+                    tv_expertise.setError(null);
+                    cb_dairy.setError(null);
+                    cb_pet.setError(null);
+                    cb_equine.setError(null);
+                    cb_other.setError(null);
+                    tv_specialization.setError(null);
+
+                } else if (cb_other.isChecked() && !(cb_other_fish.isChecked() || cb_other_lion.isChecked() || cb_other_deer.isChecked() || cb_other_monkey.isChecked() || cb_other_other.isChecked())) {
+
+                    scroll.smoothScrollTo(0, cb_other.getTop());
+                    cb_other.setError("Please Select Any Expertise!");
+                    Toast.makeText(ProfileUpdateForVeterinary.this, "Please Select Any Other Category Expertise!", Toast.LENGTH_SHORT).show();
+                    cb_other.setAnimation(animShake);
+
+                    tv_expertise.setError(null);
+                    cb_dairy.setError(null);
+                    cb_pet.setError(null);
+                    cb_equine.setError(null);
+                    cb_bird.setError(null);
+                    tv_specialization.setError(null);
+
+                } else if (!(cb_treatment.isChecked() || cb_nutritionist.isChecked() || cb_breeding.isChecked() || cb_surgeon.isChecked())) {
+
+                    scroll.smoothScrollTo(0, tv_specialization.getTop());
+                    tv_specialization.setError("Please Select Any Specialization!");
+                    Toast.makeText(ProfileUpdateForVeterinary.this, "Please Select Any Specialization!", Toast.LENGTH_SHORT).show();
+                    tv_specialization.setAnimation(animShake);
+
+                    tv_expertise.setError(null);
+                    cb_dairy.setError(null);
+                    cb_pet.setError(null);
+                    cb_equine.setError(null);
+                    cb_bird.setError(null);
+                    cb_other.setError(null);
 
                 }
 
-                Log.e("TAg", "the experience from is: " + expFrom);
-                Log.e("TAg", "the experience expTo is: " + expTo);
-                Log.e("TAg", "the experience expORG_Name is: " + expORG_Name);
+                else if (et_deparments_mpil_dvm.getText().toString().length() == 0 && et_passing_year_mpil_dvm.getText().toString().length() == 0 && et_instituation_name_mpil_dvm.getText().toString().length() == 0) {
 
-            }
+                    if (et_deparments_mpil_dvm.getText().toString().length() == 0) {
 
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_pet.setError(null);
-            cb_equine.setError(null);
-            cb_bird.setError(null);
-            cb_other.setError(null);
-            tv_specialization.setError(null);
+                        scroll.smoothScrollTo(0, et_deparments_mpil_dvm.getBottom());
+                        et_deparments_mpil_dvm.setError("This field can not be empty!");
+                        et_deparments_mpil_dvm.setAnimation(animShake);
 
-            Log.e("TAG", "NOT OKAY!");
+                    } else if (et_passing_year_mpil_dvm.getText().toString().length() == 0) {
 
-        } else {
+                        scroll.smoothScrollTo(0, et_passing_year_mpil_dvm.getBottom());
+                        et_passing_year_mpil_dvm.setError("This field can not be empty!");
+                        et_passing_year_mpil_dvm.setAnimation(animShake);
 
-            tv_expertise.setError(null);
-            cb_dairy.setError(null);
-            cb_pet.setError(null);
-            cb_equine.setError(null);
-            cb_bird.setError(null);
-            cb_other.setError(null);
-            tv_specialization.setError(null);
+                    } else if (et_instituation_name_mpil_dvm.getText().toString().length() == 0) {
 
-        Log.e("TAG", "OKAY! ");
+                        scroll.smoothScrollTo(0, et_instituation_name_mpil_dvm.getBottom());
+                        et_instituation_name_mpil_dvm.setError("This field can not be empty!");
+                        et_instituation_name_mpil_dvm.setAnimation(animShake);
 
-        System.gc();
+                    }
 
-        if (topDocumentsArray.size()>0){
-            topDocumentsArray.clear();
-        }
+                    tv_expertise.setError(null);
+                    cb_dairy.setError(null);
+                    cb_pet.setError(null);
+                    cb_equine.setError(null);
+                    cb_bird.setError(null);
+                    cb_other.setError(null);
+                    tv_specialization.setError(null);
 
-        int chiledCountForTopDocuments = ll_inflate_document_for_first.getChildCount();
-        //Log.e("TAg", "the child count for top documents are: " + chiledCountForTopDocuments);
+                    Log.e("TAG", "et_deparments_mpil_dvm: " + et_deparments_mpil_dvm.getText().toString());
+                    Log.e("TAG", "et_passing_year_mpil_dvm: " + et_passing_year_mpil_dvm.getText().toString());
+                    Log.e("TAG", "et_deparments_mpil_dvm: " + et_instituation_name_mpil_dvm.getText().toString());
 
-        if (chiledCountForTopDocuments>0){
+                    if (theExperienceViewCount >= 1 && (et_experience_from.getText().toString().length() == 0 || et_experience_from.getText().toString().length() != 4 || et_experience_to.getText().toString().length() == 0 || et_experience_to.getText().toString().length() != 4 || et_organization_name.getText().toString().length() == 0 || Integer.valueOf(et_experience_from.getText().toString()) > Integer.valueOf(et_experience_to.getText().toString()))) {
 
-            for (int i = 0; i<chiledCountForTopDocuments;i++){
+                        for (int i = 0; i < theExperienceViewCount; i++) {
 
-                final View mViews = ll_inflate_document_for_first.getChildAt(i);
-                TextView tv_image_uri = (TextView) mViews.findViewById(R.id.tv_image_uri);
-                Log.e("TAg", "the image uri is: " + tv_image_uri.getText().toString());
-                topDocumentsArray.add(tv_image_uri.getText().toString());
+                            final View parantView = ll_to_inflat.getChildAt(i);
+                            et_experience_from = (EditText) parantView.findViewById(R.id.et_experience_from);
+                            et_experience_to = (EditText) parantView.findViewById(R.id.et_experience_to);
+                            et_organization_name = (EditText) parantView.findViewById(R.id.et_organization_name);
 
-            }
+                            String expFrom = et_experience_from.getText().toString();
+                            String expTo = et_experience_to.getText().toString();
+                            String expORG_Name = et_organization_name.getText().toString();
 
-        }//end of for loop for top documents
+                            if (et_experience_from.getText().toString().length() == 0) {
 
-        JSONObject jsonObjectD;
+                                //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
+                                et_experience_from.setError("This field can not be empty!");
+                                ll_to_inflat.setAnimation(animShake);
 
-        LinkedHashMap<String, String> dataListSimple = new LinkedHashMap<>();
-        dataListSimple.put("passing_year", topPassingYeaer);
-        dataListSimple.put("instituatio_name", topInstituation);
+                            } else if (et_experience_from.getText().toString().length() != 4) {
 
-        dataListSimple.put("instituatio_RVMP", toRVMP_or_SVMP);
+                                et_experience_from.setError("4 characters required!");
+                                ll_to_inflat.setAnimation(animShake);
+
+                            } else if (et_experience_to.getText().toString().length() == 0) {
+
+                                //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
+                                et_experience_to.setError("This field can not be empty!");
+                                ll_to_inflat.setAnimation(animShake);
+
+                            } else if (et_experience_to.getText().toString().length() != 4) {
+
+                                et_experience_to.setError("4 characters required!");
+                                ll_to_inflat.setAnimation(animShake);
+
+                            } else if (et_organization_name.getText().toString().length() == 0) {
+
+                                //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
+                                et_organization_name.setError("This field can not be empty!");
+                                ll_to_inflat.setAnimation(animShake);
+
+                            } else if (Integer.valueOf(et_experience_from.getText().toString()) > Integer.valueOf(et_experience_to.getText().toString())) {
+
+                                //scroll.smoothScrollTo(0, ll_to_inflat.getTop());
+                                et_experience_to.setError("Must be greater than or equal to From!");
+                                ll_to_inflat.setAnimation(animShake);
+
+                            }
+
+                            Log.e("TAg", "the experience from is: " + expFrom);
+                            Log.e("TAg", "the experience expTo is: " + expTo);
+                            Log.e("TAg", "the experience expORG_Name is: " + expORG_Name);
+
+                        }
+
+                        tv_expertise.setError(null);
+                        cb_dairy.setError(null);
+                        cb_pet.setError(null);
+                        cb_equine.setError(null);
+                        cb_bird.setError(null);
+                        cb_other.setError(null);
+                        tv_specialization.setError(null);
+
+                        Log.e("TAG", "Experience NOT OKAY!");
+
+                    }
+
+                } else {
+
+                    tv_expertise.setError(null);
+                    cb_dairy.setError(null);
+                    cb_pet.setError(null);
+                    cb_equine.setError(null);
+                    cb_bird.setError(null);
+                    cb_other.setError(null);
+                    tv_specialization.setError(null);
+
+                    Log.e("TAG", "OKAY! ");
+
+                    //System.gc();
+
+                    if (topDocumentsArray.size() > 0) {
+                        topDocumentsArray.clear();
+                    }
+
+                    int chiledCountForTopDocuments = ll_inflate_document_for_first.getChildCount();
+                    Log.e("TAg", "the child count for top documents are: " + chiledCountForTopDocuments);
+
+                    if (chiledCountForTopDocuments > 0) {
+
+                        for (int i = 0; i < chiledCountForTopDocuments; i++) {
+
+                            final View mViews = ll_inflate_document_for_first.getChildAt(i);
+                            TextView tv_image_uri = (TextView) mViews.findViewById(R.id.tv_image_uri);
+                            Log.e("TAg", "the image uri is: " + tv_image_uri.getText().toString());
+                            topDocumentsArray.add(tv_image_uri.getText().toString());
+
+                        }
+
+                    }//end of for loop for top documents
+
+                    JSONObject jsonObjectD;
+
+                    LinkedHashMap<String, String> dataListSimple = new LinkedHashMap<>();
+                    dataListSimple.put("passing_year", topPassingYeaer);
+                    dataListSimple.put("instituatio_name", topInstituation);
+
+                    dataListSimple.put("instituatio_RVMP", toRVMP_or_SVMP);
+
+                    Log.e("TAG","passing_year: " + topPassingYeaer);
+                    Log.e("TAG","instituatio_name: " + topInstituation);
+                    Log.e("TAG","instituatio_RVMP: " + toRVMP_or_SVMP);
         /*if (et_rvmp_mpil_dvm.getVisibility() == view.VISIBLE){
             dataListSimple.put("instituatio_RVMP", toRVMP_or_SVMP);
         }*/
-            //ArrayList<HashMap<String, String>> deta = new ArrayList<>();
+                    //ArrayList<HashMap<String, String>> deta = new ArrayList<>();
                     //deta.add(dataListSimple);
 
-        jsonObjectDiploma = new JSONObject();
+                    jsonObjectDiploma = new JSONObject();
 
-        //JSONArray jsonArray = new JSONArray(deta);
+                    //JSONArray jsonArray = new JSONArray(deta);
 
-        jsonObjectD = new JSONObject(dataListSimple);
+                    jsonObjectD = new JSONObject(dataListSimple);
 
-        try {
+                    try {
 
-            jsonObjectDiploma.put("Diploma", jsonObjectD);
+                        jsonObjectDiploma.put("Diploma", jsonObjectD);
 
-            Log.e("TAg", "Diploma: " + jsonObjectD);
+                        //Log.e("TAg", "Diploma: " + jsonObjectD);
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
 
-        //for diary
+                    //for diary
 
-        if (cb_dairy.isChecked()){
+                    if (cb_dairy.isChecked()) {
 
-            //LinkedList<HashMap<String, String>> deta1 = new LinkedList<>();
-            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-            int test = 0;
+                        //LinkedList<HashMap<String, String>> deta1 = new LinkedList<>();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        int test = 0;
 
-            if (cb_dairy_cow.isChecked()){
-                String cb_dairy_check = Arrays.getID(Arrays.dairy_categories,cb_dairy_cow.getText().toString());
-                dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
-            }
-
-            if (cb_dairy_buffalo.isChecked()){
-                String cb_dairy_check = Arrays.getID(Arrays.dairy_categories,cb_dairy_buffalo.getText().toString());
-                dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
-            }
-
-            if (cb_dairy_sheep.isChecked()){
-                String cb_dairy_check = Arrays.getID(Arrays.dairy_categories,cb_dairy_sheep.getText().toString());
-                dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
-            }
-
-            if (cb_dairy_goat.isChecked()){
-                String cb_dairy_check = Arrays.getID(Arrays.dairy_categories,cb_dairy_goat.getText().toString());
-                dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
-            }
-
-            if (cb_dairy_camel.isChecked()){
-                String cb_dairy_check = Arrays.getID(Arrays.dairy_categories,cb_dairy_camel.getText().toString());
-                dataListSimple2.put(String.valueOf(test), cb_dairy_check);
-            }
-
-            //deta1.add(dataListSimple2);
-            jsonObjectDairy = new JSONObject();
-            //JSONArray jsonArray2 = new JSONArray(deta1);
-            jODairy = new JSONObject(dataListSimple2);
-
-            try {
-                jsonObjectDairy.put("Dairy", jODairy);
-
-                //Log.e("TAg", "Dairy JSON Object: " + forDairy);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        } else {
-
-            data.clear();
-            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-            jsonObjectDairy = new JSONObject();
-            //JSONArray jsonArray2 = new JSONArray(deta1);
-            jODairy = new JSONObject(dataListSimple2);
-            try {
-                jsonObjectDairy.put("Dairy", jODairy);
-                //Log.e("TAg", "Dairy JSON Object: " + forDairy);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-                        //for pet
-                        if (cb_pet.isChecked()){
-                            //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            int test = 0;
-                            if (cb_pet_dog.isChecked()){
-                                String cb_pet_check = Arrays.getID(Arrays.pets_categories,cb_pet_dog.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_pet_check);
-                            }
-                            if (cb_pet_cat.isChecked()){
-                                String cb_pet_check = Arrays.getID(Arrays.pets_categories,cb_pet_cat.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_pet_check);
-                            }
-                            if (cb_pet_rabbit.isChecked()){
-                                String cb_pet_check = Arrays.getID(Arrays.pets_categories,cb_pet_rabbit.getText().toString());
-                                dataListSimple2.put(String.valueOf(test), cb_pet_check);
-                            }
-
-                            //deta1.add(dataListSimple2);
-                            jsonObjectPets = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectPets.put("Pets", jsonObject3);
-
-                                //Log.e("TAg", "Pets JSON Object: " + forPets);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        } else {
-
-                            data.clear();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            jsonObjectPets = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectPets.put("Pets", jsonObject3);
-
-                                //Log.e("TAg", "Pets JSON Object: " + forPets);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
+                        if (cb_dairy_cow.isChecked()) {
+                            String cb_dairy_check = Arrays.getID(Arrays.dairy_categories, cb_dairy_cow.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
                         }
 
-                        //for equine
-                        if (cb_equine.isChecked()){
-                            //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            int test = 0;
-                            if (cb_equine.isChecked()){
-                                String cb_equine = Arrays.getID(Arrays.equine_categories,cb_equine_horse.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_equine);
-                            }
-                            if (cb_equine_donkey.isChecked()){
-                                String cb_equine = Arrays.getID(Arrays.equine_categories,cb_equine_donkey.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_equine);
-                            }
-                            if (cb_equine.isChecked()){
-                                String cb_equine = Arrays.getID(Arrays.equine_categories,cb_equine_mule.getText().toString());
-                                dataListSimple2.put(String.valueOf(test), cb_equine);
-                            }
-
-                            //deta1.add(dataListSimple2);
-                            jsonObjectEquine = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectEquine.put("Equine", jsonObject3);
-
-                                //Log.e("TAg", "Equine JSON Object: " + forEquine);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
-                        } else {
-
-                            data.clear();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            jsonObjectEquine = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectEquine.put("Equine", jsonObject3);
-
-                                //Log.e("TAg", "Equine JSON Object: " + forEquine);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
+                        if (cb_dairy_buffalo.isChecked()) {
+                            String cb_dairy_check = Arrays.getID(Arrays.dairy_categories, cb_dairy_buffalo.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
                         }
 
-                        //for birds
-                        if (cb_bird.isChecked()){
-                            //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            int test = 0;
-                            if (cb_bird_ostrich.isChecked()){
-                                String cb_birds = Arrays.getID(Arrays.birds_categories,cb_bird_ostrich.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_birds);
-                            }
-                            if (cb_bird_poultry.isChecked()){
-                                String cb_birds = Arrays.getID(Arrays.birds_categories,cb_bird_poultry.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_birds);
-                            }
-                            if (cb_bird_fancy.isChecked()){
-                                String cb_birds = Arrays.getID(Arrays.birds_categories,cb_bird_fancy.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_birds);
-                            }
-                            if (cb_bird_game.isChecked()){
-                                String cb_birds = Arrays.getID(Arrays.birds_categories,cb_bird_game.getText().toString());
-                                dataListSimple2.put(String.valueOf(test), cb_birds);
-                            }
-
-                            //deta1.add(dataListSimple2);
-                            jsonObjectBirds = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectBirds.put("Birds", jsonObject3);
-
-                               //Log.e("TAg", "Birds JSON Object: " + forBirds);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
-                        } else {
-
-                            data.clear();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            jsonObjectBirds = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectBirds.put("Birds", jsonObject3);
-
-                                //Log.e("TAg", "Birds JSON Object: " + forBirds);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
+                        if (cb_dairy_sheep.isChecked()) {
+                            String cb_dairy_check = Arrays.getID(Arrays.dairy_categories, cb_dairy_sheep.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
                         }
 
-                        //for other
-                        if (cb_other.isChecked()){
-                            //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            int test = 0;
-                            if (cb_other_fish.isChecked()){
-                                String cb_other = Arrays.getID(Arrays.other_categories,cb_other_fish.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_other);
-                            }
-                            if (cb_other_lion.isChecked()){
-                                String cb_other = Arrays.getID(Arrays.other_categories,cb_other_lion.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_other);
-                            }
-                            if (cb_other_deer.isChecked()){
-                                String cb_other = Arrays.getID(Arrays.other_categories,cb_other_deer.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_other);
-                            }
-                            if (cb_other_monkey.isChecked()){
-                                String cb_other = Arrays.getID(Arrays.other_categories,cb_other_monkey.getText().toString());
-                                dataListSimple2.put(String.valueOf(test++), cb_other);
-                            }
-                            if (cb_other_other.isChecked()){
-                                String cb_other = Arrays.getID(Arrays.other_categories,cb_other_other.getText().toString());
-                                dataListSimple2.put(String.valueOf(test), cb_other);
-                            }
-
-                            //deta1.add(dataListSimple2);
-                            jsonObjectOther = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectOther.put("Other", jsonObject3);
-
-                                //Log.e("TAg", "Other JSON Object: " + forOther);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        } else {
-
-                            data.clear();
-                            LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
-                            jsonObjectOther = new JSONObject();
-                            //JSONArray jsonArray2 = new JSONArray(deta1);
-                            JSONObject jsonObject3 = new JSONObject(dataListSimple2);
-                            try {
-                                jsonObjectOther.put("Other", jsonObject3);
-
-                                //Log.e("TAg", "Other JSON Object: " + forOther);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
+                        if (cb_dairy_goat.isChecked()) {
+                            String cb_dairy_check = Arrays.getID(Arrays.dairy_categories, cb_dairy_goat.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_dairy_check);
                         }
+
+                        if (cb_dairy_camel.isChecked()) {
+                            String cb_dairy_check = Arrays.getID(Arrays.dairy_categories, cb_dairy_camel.getText().toString());
+                            dataListSimple2.put(String.valueOf(test), cb_dairy_check);
+                        }
+
+                        //deta1.add(dataListSimple2);
+                        jsonObjectDairy = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        jODairy = new JSONObject(dataListSimple2);
+
+                        try {
+                            jsonObjectDairy.put("Dairy", jODairy);
+
+                            //Log.e("TAg", "Dairy JSON Object: " + jODairy);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+
+                        data.clear();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        jsonObjectDairy = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        jODairy = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectDairy.put("Dairy", jODairy);
+                            //Log.e("TAg", "Dairy JSON Object: " + jODairy);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    //for pet
+                    if (cb_pet.isChecked()) {
+                        //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        int test = 0;
+                        if (cb_pet_dog.isChecked()) {
+                            String cb_pet_check = Arrays.getID(Arrays.pets_categories, cb_pet_dog.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_pet_check);
+                        }
+                        if (cb_pet_cat.isChecked()) {
+                            String cb_pet_check = Arrays.getID(Arrays.pets_categories, cb_pet_cat.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_pet_check);
+                        }
+                        if (cb_pet_rabbit.isChecked()) {
+                            String cb_pet_check = Arrays.getID(Arrays.pets_categories, cb_pet_rabbit.getText().toString());
+                            dataListSimple2.put(String.valueOf(test), cb_pet_check);
+                        }
+
+                        //deta1.add(dataListSimple2);
+                        jsonObjectPets = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectPets.put("Pets", jsonObject3);
+
+                            //Log.e("TAg", "Pets JSON Object: " + jsonObject3);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+
+                        data.clear();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        jsonObjectPets = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectPets.put("Pets", jsonObject3);
+
+                            //Log.e("TAg", "Pets JSON Object: " + jsonObject3);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+                    //for equine
+                    if (cb_equine.isChecked()) {
+                        //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        int test = 0;
+                        if (cb_equine.isChecked()) {
+                            String cb_equine = Arrays.getID(Arrays.equine_categories, cb_equine_horse.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_equine);
+                        }
+                        if (cb_equine_donkey.isChecked()) {
+                            String cb_equine = Arrays.getID(Arrays.equine_categories, cb_equine_donkey.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_equine);
+                        }
+                        if (cb_equine.isChecked()) {
+                            String cb_equine = Arrays.getID(Arrays.equine_categories, cb_equine_mule.getText().toString());
+                            dataListSimple2.put(String.valueOf(test), cb_equine);
+                        }
+
+                        //deta1.add(dataListSimple2);
+                        jsonObjectEquine = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectEquine.put("Equine", jsonObject3);
+
+                            //Log.e("TAg", "Equine JSON Object: " + forEquine);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    } else {
+
+                        data.clear();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        jsonObjectEquine = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectEquine.put("Equine", jsonObject3);
+
+                            //Log.e("TAg", "Equine JSON Object: " + forEquine);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+                    //for birds
+                    if (cb_bird.isChecked()) {
+                        //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        int test = 0;
+                        if (cb_bird_ostrich.isChecked()) {
+                            String cb_birds = Arrays.getID(Arrays.birds_categories, cb_bird_ostrich.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_birds);
+                        }
+                        if (cb_bird_poultry.isChecked()) {
+                            String cb_birds = Arrays.getID(Arrays.birds_categories, cb_bird_poultry.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_birds);
+                        }
+                        if (cb_bird_fancy.isChecked()) {
+                            String cb_birds = Arrays.getID(Arrays.birds_categories, cb_bird_fancy.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_birds);
+                        }
+                        if (cb_bird_game.isChecked()) {
+                            String cb_birds = Arrays.getID(Arrays.birds_categories, cb_bird_game.getText().toString());
+                            dataListSimple2.put(String.valueOf(test), cb_birds);
+                        }
+
+                        //deta1.add(dataListSimple2);
+                        jsonObjectBirds = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectBirds.put("Birds", jsonObject3);
+
+                            //Log.e("TAg", "Birds JSON Object: " + forBirds);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    } else {
+
+                        data.clear();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        jsonObjectBirds = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectBirds.put("Birds", jsonObject3);
+
+                            //Log.e("TAg", "Birds JSON Object: " + forBirds);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+                    //for other
+                    if (cb_other.isChecked()) {
+                        //ArrayList<HashMap<String, String>> deta1 = new ArrayList<>();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        int test = 0;
+                        if (cb_other_fish.isChecked()) {
+                            String cb_other = Arrays.getID(Arrays.other_categories, cb_other_fish.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_other);
+                        }
+                        if (cb_other_lion.isChecked()) {
+                            String cb_other = Arrays.getID(Arrays.other_categories, cb_other_lion.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_other);
+                        }
+                        if (cb_other_deer.isChecked()) {
+                            String cb_other = Arrays.getID(Arrays.other_categories, cb_other_deer.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_other);
+                        }
+                        if (cb_other_monkey.isChecked()) {
+                            String cb_other = Arrays.getID(Arrays.other_categories, cb_other_monkey.getText().toString());
+                            dataListSimple2.put(String.valueOf(test++), cb_other);
+                        }
+                        if (cb_other_other.isChecked()) {
+                            String cb_other = Arrays.getID(Arrays.other_categories, cb_other_other.getText().toString());
+                            dataListSimple2.put(String.valueOf(test), cb_other);
+                        }
+
+                        //deta1.add(dataListSimple2);
+                        jsonObjectOther = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectOther.put("Other", jsonObject3);
+
+                            //Log.e("TAg", "Other JSON Object: " + forOther);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+
+                        data.clear();
+                        LinkedHashMap<String, String> dataListSimple2 = new LinkedHashMap<>();
+                        jsonObjectOther = new JSONObject();
+                        //JSONArray jsonArray2 = new JSONArray(deta1);
+                        JSONObject jsonObject3 = new JSONObject(dataListSimple2);
+                        try {
+                            jsonObjectOther.put("Other", jsonObject3);
+
+                            //Log.e("TAg", "Other JSON Object: " + forOther);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
 
                     ArrayList<JSONObject> expertise = new ArrayList<>();
                     expertise.add(jsonObjectDairy);
@@ -1683,19 +1691,19 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                     expertise.add(jsonObjectBirds);
                     expertise.add(jsonObjectOther);
 
-                    Log.e("TAG", "Expertise: " + expertise);
+                    //Log.e("TAG", "Expertise: " + expertise);
 
 
                     JSONObject jsonObjectSpecialities = new JSONObject();
 
-                        //for specialist cheboxes
-                    if (sp_select_qualification.getSelectedItemId() == 1){
+                    //for specialist cheboxes
+                    if (sp_select_qualification.getSelectedItemId() == 1) {
 
                         //ArrayList<HashMap<String, String>> specialistDataList = new ArrayList<>();
                         LinkedHashMap<String, String> dataListSpecialist = new LinkedHashMap<>();
 
-                        if (cb_breeding.isChecked()){
-                            String cb_treat = Arrays.getID(Arrays.specialities,cb_breeding.getText().toString());
+                        if (cb_breeding.isChecked()) {
+                            String cb_treat = Arrays.getID(Arrays.specialities, cb_breeding.getText().toString());
                             dataListSpecialist.put("0", cb_treat);
                         }
 
@@ -1706,31 +1714,31 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                         try {
                             jsonObjectSpecialist.put("specialities", jsonObjectSpecialities);
 
-                            Log.e("TAg", "Specialities: " + jsonObjectSpecialities);
+                            //Log.e("TAg", "Specialities: " + jsonObjectSpecialities);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
 
                     }
 
-                    if (sp_select_qualification.getSelectedItemId() == 2){
+                    if (sp_select_qualification.getSelectedItemId() == 2) {
                         //ArrayList<HashMap<String, String>> specialistDataList = new ArrayList<>();
                         LinkedHashMap<String, String> dataListSpecialist = new LinkedHashMap<>();
                         int test = 0;
-                        if (cb_treatment.isChecked()){
-                            String cb_treat = Arrays.getID(Arrays.specialities,cb_treatment.getText().toString());
+                        if (cb_treatment.isChecked()) {
+                            String cb_treat = Arrays.getID(Arrays.specialities, cb_treatment.getText().toString());
                             dataListSpecialist.put(String.valueOf(test++), cb_treat);
                         }
-                        if (cb_nutritionist.isChecked()){
-                            String cb_treat = Arrays.getID(Arrays.specialities,cb_nutritionist.getText().toString());
+                        if (cb_nutritionist.isChecked()) {
+                            String cb_treat = Arrays.getID(Arrays.specialities, cb_nutritionist.getText().toString());
                             dataListSpecialist.put(String.valueOf(test++), cb_treat);
                         }
-                        if (cb_breeding.isChecked()){
-                            String cb_treat = Arrays.getID(Arrays.specialities,cb_breeding.getText().toString());
+                        if (cb_breeding.isChecked()) {
+                            String cb_treat = Arrays.getID(Arrays.specialities, cb_breeding.getText().toString());
                             dataListSpecialist.put(String.valueOf(test++), cb_treat);
                         }
-                        if (cb_surgeon.isChecked()){
-                            String cb_treat = Arrays.getID(Arrays.specialities,cb_surgeon.getText().toString());
+                        if (cb_surgeon.isChecked()) {
+                            String cb_treat = Arrays.getID(Arrays.specialities, cb_surgeon.getText().toString());
                             dataListSpecialist.put(String.valueOf(test), cb_treat);
                         }
 
@@ -1741,7 +1749,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                         try {
                             jsonObjectSpecialist.put("specialities", jsonObjectSpecialities);
 
-                            Log.e("TAg", "Specialities: " + jsonObjectSpecialities);
+                            //Log.e("TAg", "Specialities: " + jsonObjectSpecialities);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -1751,7 +1759,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                     JSONObject jsonObjectMphil = new JSONObject();
 
                     //for mPhil
-                    if (sp_select_qualification.getSelectedItemId() == 2){
+                    if (sp_select_qualification.getSelectedItemId() == 2) {
 
                         LinkedHashMap<String, String> mPhileData = new LinkedHashMap<>();
                         mPhileData.put("department", mPhileDemartment);
@@ -1767,7 +1775,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                         try {
                             jsonObjectMphile.put("mPhil", jsonObjectMphil);
 
-                            Log.e("TAg", "MPhil: " + jsonObjectMphil);
+                            //Log.e("TAg", "MPhil: " + jsonObjectMphil);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -1787,34 +1795,34 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                         try {
                             jsonObjectMphile.put("mPhil", jsonObjectMphil);
 
-                            Log.e("TAg", "MPhil: " + jsonObjectMphil);
+                            //Log.e("TAg", "MPhil: " + jsonObjectMphil);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
 
                     }
 
-                    if (mPhileDocuments.size()>0){
+                    if (mPhileDocuments.size() > 0) {
                         mPhileDocuments.clear();
                     }
                     int chiledCountForMphileDocuments = ll_inflate_document_for_mphil_document.getChildCount();
-                  //  Log.e("TAg", "the child count for top documents are: " + chiledCountForTopDocuments);
-                    if (chiledCountForMphileDocuments>0){
-                        for (int i = 0; i<chiledCountForMphileDocuments;i++){
+                      //Log.e("TAg", "the child count for top documents are: " + chiledCountForTopDocuments);
+                    if (chiledCountForMphileDocuments > 0) {
+                        for (int i = 0; i < chiledCountForMphileDocuments; i++) {
 
                             final View mViews = ll_inflate_document_for_mphil_document.getChildAt(i);
                             TextView tv_image_uri_mphil = (TextView) mViews.findViewById(R.id.tv_image_uri_mphil);
-                      //      Log.e("TAg", "the image uri is: " + tv_image_uri_mphil.getText().toString());
+                            //Log.e("TAg", "the image uri is: " + tv_image_uri_mphil.getText().toString());
                             mPhileDocuments.add(tv_image_uri_mphil.getText().toString());
                         }
                     }//end of for loop for mphile documents
 
                     JSONArray jsonArrayExperience = new JSONArray();
 
-                   //for experience
+                    //for experience
                     ArrayList<LinkedHashMap<String, String>> deta2 = new ArrayList<>();
-                        if (experineceViewList.size()>0){
-                        for (int s=0;s<experineceViewList.size();s++){
+                    if (experineceViewList.size() > 0) {
+                        for (int s = 0; s < experineceViewList.size(); s++) {
                             LinkedHashMap<String, String> dataListSimple1 = new LinkedHashMap<>();
                             String experienceFrom = experineceViewList.get(s).getdFrom();
                             String experienceTo = experineceViewList.get(s).getdTo();
@@ -1826,54 +1834,54 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                         }
 
 
-                            jsonObjectExperience = new JSONObject();
-                            jsonArrayExperience = new JSONArray(deta2);
-                            try {
-                                jsonObjectExperience.put("Experience", jsonArrayExperience);
+                        jsonObjectExperience = new JSONObject();
+                        jsonArrayExperience = new JSONArray(deta2);
+                        try {
+                            jsonObjectExperience.put("Experience", jsonArrayExperience);
 
-                                Log.e("TAg", "Experience: " + jsonArrayExperience);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
-                            for (int x=0;x<experineceViewList.size();x++) {
-
-                                ArrayList<String> imageUriListForExperience = new ArrayList<>();
-
-                                ArrayList<String> tempArray = experineceViewList.get(x).getUris();
-                                if (tempArray.size()>0) {
-                                    for (int s=0;s<tempArray.size();s++) {
-                                        imageUriListForExperience.add(tempArray.get(s).toString());
-                                    }
-                                }
-                                //Log.e("TAG", "Array Size For Documents Experience: " + imageUriListForExperience.size());
-                            }
-
+                            Log.e("TAg", "Experience: " + jsonArrayExperience);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
+
+                        for (int x = 0; x < experineceViewList.size(); x++) {
+
+                            ArrayList<String> imageUriListForExperience = new ArrayList<>();
+
+                            ArrayList<String> tempArray = experineceViewList.get(x).getUris();
+                            if (tempArray.size() > 0) {
+                                for (int s = 0; s < tempArray.size(); s++) {
+                                    imageUriListForExperience.add(tempArray.get(s).toString());
+                                }
+                            }
+                            //Log.e("TAG", "Array Size For Documents Experience: " + imageUriListForExperience.size());
+                        }
+
+                    }
 
                     String user_id = Prefs.getUserIDFromPref(ProfileUpdateForVeterinary.this);
 
-                        String diploma_type = "";
+                    String diploma_type = "";
 
-                        if (sp_select_qualification.getSelectedItemId() == 1){
-                            diploma_type = "LAD";
-                        } else if (sp_select_qualification.getSelectedItemId() == 2){
-                            diploma_type = "DVM";
-                        }
+                    if (sp_select_qualification.getSelectedItemId() == 1) {
+                        diploma_type = "LAD";
+                    } else if (sp_select_qualification.getSelectedItemId() == 2) {
+                        diploma_type = "DVM";
+                    }
 
-                        Log.e("TAG","OKAY!");
+                    //Log.e("TAG", "DATA IS OKAY!");
 
                     //calling service to upload images
                     //upLoadingDataToServer(user_id, diploma_type, jsonObjectD.toString(), expertise.toString(),jsonObjectSpecialities.toString(), jsonObjectMphil.toString() , jsonArrayExperience.toString() , topDocumentsArray, mPhileDocuments, experineceViewList);
-            uploadDataToServer(user_id, diploma_type, jsonObjectD.toString(), expertise.toString(),jsonObjectSpecialities.toString(), jsonObjectMphil.toString() , jsonArrayExperience.toString());
+                    uploadDataToServer(user_id, diploma_type, jsonObjectD.toString(), expertise.toString(), jsonObjectSpecialities.toString(), jsonObjectMphil.toString(), jsonArrayExperience.toString());
 
-        }
+                }
 
-                }//end of overide click buttons
-            });
-        }
+            }//end of overide click buttons
+        });
+    }
 
-    public class TempDataClass{
+    public class TempDataClass {
 
         public String getdTo() {
             return dTo;
@@ -1894,7 +1902,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         String dTo, dFrom, dORGName;
         ArrayList<String> uris;
 
-        public TempDataClass(String dTo, String dFrom, String dORGName, ArrayList<String> uris){
+        public TempDataClass(String dTo, String dFrom, String dORGName, ArrayList<String> uris) {
 
             this.dTo = dTo;
             this.dFrom = dFrom;
@@ -1911,8 +1919,8 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         startActivity(new Intent(ProfileUpdateForVeterinary.this, DashboardVeterinarian.class));
         finish();
     }
-    
-    private void uploadDataToServer(final String user_id, final String diploma_type, final String Diploma, final String Expertise, final String Specialities, final String MPhil, final String Experience){
+
+    private void uploadDataToServer(final String user_id, final String diploma_type, final String Diploma, final String Expertise, final String Specialities, final String MPhil, final String Experience) {
         // Tag used to cancel the request
         String cancel_req_tag = "update";
         //show pregress here
@@ -1947,7 +1955,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
                         boolean exist = jObj.getBoolean("exist");
 
-                        if (exist){
+                        if (exist) {
                             String message = jObj.getString("msg");
                             Toast.makeText(ProfileUpdateForVeterinary.this, message, Toast.LENGTH_SHORT).show();
                         } else {
@@ -1968,7 +1976,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("TAG", "Uploading Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),"Server Connection Fail", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Server Connection Fail", Toast.LENGTH_LONG).show();
                 //hid pregress here
                 progress_logo.clearAnimation();
                 progress_logo.setVisibility(View.GONE);
@@ -1992,7 +2000,14 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                 params.put("MPhil", MPhil);
                 params.put("Experience", Experience);
 
-                Log.e("Service","id: " + user_id +
+                Log.e("TAG","diploma_type: " + diploma_type);
+                Log.e("TAG","Diploma: " + Diploma);
+                Log.e("TAG","Expertise: " + Expertise);
+                Log.e("TAG","Specialities: " + Specialities);
+                Log.e("TAG","MPhil: " + MPhil);
+                Log.e("TAG","Experience: " + Experience);
+
+                Log.e("Service", "id: " + user_id +
                         "\n diploma_type: " + diploma_type);
 
                 return params;
@@ -2010,11 +2025,11 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
 
     public void upLoadingDataToServer(String user_id, String diploma_type, String Diploma, String Expertise, String Specialities, String MPhil, String Experience,
                                       ArrayList<String> topDocumentsImage, ArrayList<String> mPhileDocuments
-            , ArrayList<TempDataClass> experineceViewList){
+            , ArrayList<TempDataClass> experineceViewList) {
 
-        Log.e("Service","id: " + user_id +
+        Log.e("Service", "id: " + user_id +
                 "\n diploma_type: " + diploma_type);
-        
+
         //Uploading code
         try {
             String uploadId = UUID.randomUUID().toString();
@@ -2039,7 +2054,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
                 multipartUploadRequest.addFileToUpload(mPhileImage, "mPhilImages");
             }*/
 
-            multipartUploadRequest.addParameter("Experience",Experience);
+            multipartUploadRequest.addParameter("Experience", Experience);
 
             /*for (TempDataClass experience : experineceViewList){
                 String mFrom = experience.getdFrom().toString();
@@ -2066,7 +2081,7 @@ public class ProfileUpdateForVeterinary extends AppCompatActivity {
         }
     }
 
-    private void showDialogue(String msg){
+    private void showDialogue(String msg) {
 
         final Dialog dialog = new Dialog(ProfileUpdateForVeterinary.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

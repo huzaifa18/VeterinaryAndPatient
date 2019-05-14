@@ -199,7 +199,7 @@ public class UpdateLatLong extends Service {
 
             @Override
             public void onResponse(String response) {
-                Log.e("TAG", "update latlng response: " + response.toString());
+                //Log.e("TAG", "update latlng response: " + response.toString());
                 //hideDialog();
                 try {
 

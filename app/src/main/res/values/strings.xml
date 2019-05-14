@@ -5,6 +5,7 @@
     <string name="title_veterinary">Veterinarian</string>
     <string name="title_client">Client</string>
     <string name="title_organization">Organization</string>
+    <string name="title_organization_name">Organization Name</string>
     <string name="title_sale_products">Sale Products</string>
     <string name="title_offer_jobs">Offer Jobs</string>
 

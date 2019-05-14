@@ -87,4 +87,5 @@
     <string name="check_up_requests">چیک درخواست</string>
     <string name="dashboard">ڈیش بورڈ</string>
     <string name="findjob">ملازمت تلاش کریں</string>
+    <string name="title_organization_name">تنظیم کا نام</string>
 </resources>
